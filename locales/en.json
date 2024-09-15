@@ -1,0 +1,16 @@
+{
+    "appName": "GlowUp",
+    "permissions": {
+        "CAMERA": {},
+        "CONTACTS": {},
+        "LOCATION": {},
+        "PHONE": {},
+        "SMS": {},
+        "CALENDAR": {},
+        "STORAGE": {},
+        "NOTIFICATION": {
+            "permissionNotGranted": "NOTIFICATION is not allowed"
+        },
+        "AUDIO": {}
+    }
+}

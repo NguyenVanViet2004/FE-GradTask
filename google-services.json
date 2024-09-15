@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1033743680702",
+    "project_id": "graduation-project-md21-hn359",
+    "storage_bucket": "graduation-project-md21-hn359.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033743680702:android:43b425a66ca679febc0aef",
+        "android_client_info": {
+          "package_name": "com.md21.glowupapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNZso-5lYvTYNx_lofALhckjlqsT_Y1PQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
