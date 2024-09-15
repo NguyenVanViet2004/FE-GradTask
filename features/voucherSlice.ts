@@ -12,15 +12,16 @@ const voucherSlice = createSlice({
       state.push(action.payload)
     },
     removeVoucher: (state, action: PayloadAction<string>) => {
-      return state.filter(v => v._id !== action.payload)
+      return state.filter((v) => v._id !== action.payload)
     },
     setVouchers: (state, action: PayloadAction<Voucher[]>) => action.payload,
     updateVoucher: (state, action: PayloadAction<Voucher>) => {
-      const index = state.findIndex(v => v._id === action.payload._id)
+      const index = state.findIndex((v) => v._id === action.payload._id)
       if (index !== -1) state[index] = action.payload
     }
   }
 })
 
-export const { setVouchers, addVoucher, updateVoucher, removeVoucher } = voucherSlice.actions
+export const { setVouchers, addVoucher, updateVoucher, removeVoucher } =
+  voucherSlice.actions
 export default voucherSlice.reducer

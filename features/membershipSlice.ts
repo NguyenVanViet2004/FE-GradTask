@@ -10,7 +10,10 @@ const membershipSlice = createSlice({
   name: 'membership',
   reducers: {
     setMembership: (_, action: PayloadAction<Membership>) => action.payload,
-    updateMembership: (state, action: PayloadAction<Partial<Membership>>) => ({ ...state, ...action.payload })
+    updateMembership: (state, action: PayloadAction<Partial<Membership>>) => ({
+      ...state,
+      ...action.payload
+    })
   }
 })
 

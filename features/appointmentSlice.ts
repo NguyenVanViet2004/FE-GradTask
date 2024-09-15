@@ -12,15 +12,21 @@ const appointmentSlice = createSlice({
       state.push(action.payload)
     },
     removeAppointment: (state, action: PayloadAction<string>) => {
-      return state.filter(a => a._id !== action.payload)
+      return state.filter((a) => a._id !== action.payload)
     },
-    setAppointments: (_, action: PayloadAction<Appointment[]>) => action.payload,
+    setAppointments: (_, action: PayloadAction<Appointment[]>) =>
+      action.payload,
     updateAppointment: (state, action: PayloadAction<Appointment>) => {
-      const index = state.findIndex(a => a._id === action.payload._id)
+      const index = state.findIndex((a) => a._id === action.payload._id)
       if (index !== -1) state[index] = action.payload
     }
   }
 })
 
-export const { setAppointments, addAppointment, updateAppointment, removeAppointment } = appointmentSlice.actions
+export const {
+  setAppointments,
+  addAppointment,
+  updateAppointment,
+  removeAppointment
+} = appointmentSlice.actions
 export default appointmentSlice.reducer
