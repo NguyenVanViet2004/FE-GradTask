@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import { TamaguiProvider } from 'tamagui'
 
 import { useAppFonts } from '~/hooks/useAppFonts'
-import { useInitializeI18n } from '~/hooks/useTranslation'
+import useTranslation, { useInitializeI18n } from '~/hooks/useTranslation'
 import store from '~/redux/store'
 import config from '~/tamagui.config'
 
@@ -47,12 +47,17 @@ export default function RootLayout (): React.ReactElement {
 
 function RootLayoutNav (): React.ReactElement {
   const colorScheme = useColorScheme()
+  const { t } = useTranslation()
 
   return (
     <TamaguiProvider config={config} defaultTheme={colorScheme as any}>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
         <Stack>
           <Stack.Screen name="index" options={{ headerShown: false }}/>
+          <Stack.Screen
+            name="(tabs)"
+            options={{ headerShown: false, title: t('appTitle') }}
+          />
         </Stack>
       </ThemeProvider>
     </TamaguiProvider>
