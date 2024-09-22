@@ -12,5 +12,19 @@
             "permissionNotGranted": "Ứng dụng chưa được cấp quyền"
         },
         "AUDIO": {}
+    },
+    "screens": {
+        "home": {
+            "title": "Trang chủ"
+        },
+        "booking": {
+            "title": "Đặt lịch"
+        },
+        "search": {
+            "title": "Tìm lịch"
+        },
+        "profile": {
+            "title": "Hồ sơ cá nhân"
+        }
     }
 }

@@ -12,5 +12,19 @@
             "permissionNotGranted": "NOTIFICATION is not allowed"
         },
         "AUDIO": {}
+    },
+    "screens": {
+        "home": {
+            "title": "Home"
+        },
+        "booking": {
+            "title": "Bookings"
+        },
+        "search": {
+            "title": "Search"
+        },
+        "profile": {
+            "title": "Profile"
+        }
     }
 }

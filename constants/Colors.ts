@@ -4,9 +4,13 @@ import { type Colors } from '~/interfaces/Colors'
 
 const colors: Record<'light' | 'dark', Colors> = {
   dark: {
+    blueSapphire: '#156778',
+    gray: '#757575',
     text: '#fff'
   },
   light: {
+    blueSapphire: '#156778',
+    gray: '#757575',
     text: '#000'
   }
 }
