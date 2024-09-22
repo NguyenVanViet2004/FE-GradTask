@@ -1,1 +1,1 @@
-// this file is define all constants in the project
+export const RADIUS_BUTTON: number = 10
