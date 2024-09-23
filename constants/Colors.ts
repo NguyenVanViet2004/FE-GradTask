@@ -4,10 +4,20 @@ import { type Colors } from '~/interfaces/Colors'
 
 const colors: Record<'light' | 'dark', Colors> = {
   dark: {
-    text: '#fff'
+    lightMist: '#F0F3F6',
+    primaryTeal: '#156778',
+    slateGray: '#50555C',
+    text: '#fff',
+    white: '#fff'
+
   },
   light: {
-    text: '#000'
+    lightMist: '#F0F3F6',
+    primaryTeal: '#156778',
+    slateGray: '#50555C',
+    text: '#000',
+    white: '#fff'
+
   }
 }
 
