@@ -12,5 +12,22 @@
             "permissionNotGranted": "Ứng dụng chưa được cấp quyền"
         },
         "AUDIO": {}
+    },
+    "login": {
+        "welcomeBack": "Chào mừng trở lại,",
+        "loginPrompt": "Rất vui được gặp lại bạn!, vui lòng đăng nhập để sử dụng ứng dụng.",
+        "email": "Email của bạn",
+        "password": "Mật khẩu của bạn",
+        "forgotPassword": "Quên mật khẩu?",
+        "signIn": "Đăng nhập",
+        "signInWithGoogle": "Đăng nhập bằng google",
+        "signupPrompt": "Bạn chưa có tài khoản?",
+        "joinNow": "Đăng ký ngay"
+    },
+    "signup": {
+        "name": "Tên của bạn",
+        "mobileNumber": "Số điện thoại",
+        "TermsOfUse1": "Bằng cách đăng ký, bạn đồng ý với chúng tôi ",
+        "TermsOfUse2": "Điều khoản sử dụng và thông báo về quyền riêng tư"
     }
 }

@@ -12,5 +12,22 @@
             "permissionNotGranted": "NOTIFICATION is not allowed"
         },
         "AUDIO": {}
+    },
+    "login": {
+        "welcomeBack": "Welcome back,",
+        "loginPrompt": "Glad to meet you again!, please login to use the app.",
+        "email": "Email address",
+        "password": "Password",
+        "forgotPassword": "Forgot password?",
+        "signIn": "Sign In",
+        "signInWithGoogle": "Sign in with google",
+        "signupPrompt": "Don't have an account?",
+        "joinNow": "Join Now"
+    },
+    "signup":{
+        "name": "Name",
+        "mobileNumber": "Mobile number",
+        "TermsOfUse1": "By signing up you agree to our ",
+        "TermsOfUse2": "Term of use and privacy notice"
     }
 }
