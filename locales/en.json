@@ -29,5 +29,19 @@
         "mobileNumber": "Mobile number",
         "TermsOfUse1": "By signing up you agree to our ",
         "TermsOfUse2": "Term of use and privacy notice"
+    },
+    "screens": {
+        "home": {
+            "title": "Home"
+        },
+        "booking": {
+            "title": "Bookings"
+        },
+        "search": {
+            "title": "Search"
+        },
+        "profile": {
+            "title": "Profile"
+        }
     }
 }

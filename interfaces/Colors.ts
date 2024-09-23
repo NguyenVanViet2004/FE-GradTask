@@ -4,5 +4,6 @@ export interface Colors {
   slateGray: string
   white: string
   primaryTeal: string
-
+  blueSapphire: string
+  gray: string
 }

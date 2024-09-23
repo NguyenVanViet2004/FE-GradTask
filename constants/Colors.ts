@@ -8,7 +8,9 @@ const colors: Record<'light' | 'dark', Colors> = {
     primaryTeal: '#156778',
     slateGray: '#50555C',
     text: '#fff',
-    white: '#fff'
+    white: '#fff',
+    blueSapphire: '#156778',
+    gray: '#757575',
 
   },
   light: {
@@ -16,7 +18,9 @@ const colors: Record<'light' | 'dark', Colors> = {
     primaryTeal: '#156778',
     slateGray: '#50555C',
     text: '#000',
-    white: '#fff'
+    white: '#fff',
+    blueSapphire: '#156778',
+    gray: '#757575',
 
   }
 }
