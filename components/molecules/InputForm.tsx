@@ -2,7 +2,7 @@ import { Eye, EyeOff, LockKeyhole, Mail, Phone, User2 } from '@tamagui/lucide-ic
 import { isNil } from 'lodash'
 import React, { useState } from 'react'
 import { useColorScheme } from 'react-native'
-import { Image, InputProps, Text, View, YStack } from 'tamagui'
+import { Image, type InputProps, Text, View, YStack } from 'tamagui'
 
 import InputWithIcons from '~/components/atoms/InputWithIcons'
 import { NegativeButton } from '~/components/atoms/NegativeButton'
