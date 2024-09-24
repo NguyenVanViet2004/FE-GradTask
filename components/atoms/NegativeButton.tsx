@@ -3,6 +3,7 @@ import { useColorScheme } from 'react-native'
 import { Button, type ButtonProps } from 'tamagui'
 
 import getColors from '~/constants/Colors'
+import { RADIUS_BUTTON } from '~/constants/Constants'
 
 type Props = {
   title: string
@@ -19,7 +20,7 @@ export const NegativeButton = (props: Props): React.ReactElement => {
       borderColor={colors.primaryTeal}
       height={53}
       color={colors.primaryTeal}
-      borderRadius={10}
+      borderRadius={RADIUS_BUTTON}
       icon={props.icon}
       backgroundColor={colors.white}
 
