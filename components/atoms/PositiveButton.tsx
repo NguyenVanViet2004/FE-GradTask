@@ -14,7 +14,10 @@ export const PositiveButton = (props: Props): React.ReactElement => {
   return (
     <Button
       {...props}
-      height={53}
+      unstyled
+      alignItems="center"
+      paddingVertical={16}
+      fontFamily={'JetBrainsMonoBold'}
       fontSize={16}
       color={colors.white}
       backgroundColor={colors.primaryTeal}

@@ -15,15 +15,18 @@ export const NegativeButton = (props: Props): React.ReactElement => {
   return (
     <Button
       {...props}
+      unstyled
+      justifyContent="center"
+      paddingVertical={16}
+      fontFamily={'JetBrainsMonoBold'}
+      flexDirection="row"
       fontSize={16}
       borderWidth={1}
       borderColor={colors.primaryTeal}
-      height={53}
       color={colors.primaryTeal}
       borderRadius={RADIUS_BUTTON}
       icon={props.icon}
       backgroundColor={colors.white}
-
     >
       {props.title}
     </Button>
