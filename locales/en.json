@@ -37,7 +37,7 @@
             "signupPrompt": "Don't have an account?",
             "joinNow": "Join Now"
         },
-        "signup": {
+        "signUp": {
             "name": "Name",
             "mobileNumber": "Mobile number",
             "TermsOfUse1": "By signing up you agree to our ",
