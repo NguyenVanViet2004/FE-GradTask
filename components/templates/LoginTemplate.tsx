@@ -45,7 +45,7 @@ const LoginTemplate: React.FC = (): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     gap: 20,
-    height: '100%',
+    flex: 1,
     padding: 20
   }
 })
