@@ -25,6 +25,11 @@
         },
         "profile": {
             "title": "Hồ sơ cá nhân"
+        },
+        "onboarding":{
+            "getStarted": "Bắt đầu",
+            "next": "Tiếp",
+            "login": "Đăng nhập"
         }
     }
 }

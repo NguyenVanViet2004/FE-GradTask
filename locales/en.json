@@ -25,6 +25,11 @@
         },
         "profile": {
             "title": "Profile"
+        },
+        "onboarding": {
+            "getStarted": "Get started",
+            "next": "Next",
+            "login": "Login"
         }
     }
 }
