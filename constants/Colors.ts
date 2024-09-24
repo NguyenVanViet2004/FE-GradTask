@@ -7,21 +7,21 @@ const colors: Record<'light' | 'dark', Colors> = {
     blueSapphire: '#156778',
     gray: '#757575',
     lightMist: '#F0F3F6',
+    lightTransparentBlack: 'rgba(0, 0, 0, 0.3)',
     primaryTeal: '#156778',
     slateGray: '#50555C',
     text: '#fff',
-    white: '#fff',
-    lightTransparentBlack: 'rgba(0, 0, 0, 0.3)',
+    white: '#fff'
   },
   light: {
     blueSapphire: '#156778',
     gray: '#757575',
     lightMist: '#F0F3F6',
+    lightTransparentBlack: 'rgba(0, 0, 0, 0.3)',
     primaryTeal: '#156778',
     slateGray: '#50555C',
     text: '#000',
-    white: '#fff',
-    lightTransparentBlack: 'rgba(0, 0, 0, 0.3)'
+    white: '#fff'
   }
 }
 
