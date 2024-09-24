@@ -17,7 +17,7 @@ const ContentTitle: React.FC<Props> = ({ title, subtitle }) => {
       <Text
         fontSize={24}
         fontFamily={'JetBrainsMonoBold'}
-        color={colors.primaryTeal}>
+        color={colors.text}>
         {title}
       </Text>
       <Text fontSize={14} color={colors.slateGray}>{subtitle}</Text>
