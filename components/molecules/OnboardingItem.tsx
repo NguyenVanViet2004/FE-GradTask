@@ -21,7 +21,9 @@ const OnboardingItem = (props: Props): React.ReactElement => {
         source={props.imgBackground}
         style={styles.background}
       >
-        <View style={styles.overlay} backgroundColor={'rgba(0, 0, 0, 0.3)'} />
+        <View
+          style={{ ...StyleSheet.absoluteFillObject }}
+          backgroundColor={colors.lightTransparentBlack} />
 
         <View marginHorizontal={16} marginTop={'60%'}>
           <Text
@@ -45,9 +47,6 @@ const styles = StyleSheet.create({
     height: '100%',
     justifyContent: 'center',
     width: '100%'
-  },
-  overlay: {
-    ...StyleSheet.absoluteFillObject
   }
 })
 
