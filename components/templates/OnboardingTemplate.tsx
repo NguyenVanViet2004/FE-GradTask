@@ -1,3 +1,4 @@
+import { isNil } from 'lodash'
 import { useRef, useState } from 'react'
 import { Animated, FlatList, StyleSheet, useColorScheme, useWindowDimensions, type ViewToken } from 'react-native'
 import { Spacer, View } from 'tamagui'
@@ -21,12 +22,12 @@ const OnboardingTemplate = (): React.ReactElement => {
   const viewableItemsChanged = useRef(({ viewableItems }:
   { viewableItems: ViewToken[] }) => {
     setCurrentIndex(viewableItems[0].index ?? 0)
-    if (viewableItems[0]?.index === 1 ||
-          viewableItems[0]?.index === 2 ||
-          viewableItems[0]?.index === 3) {
-      setButtonText(t('screens.onboarding.next'))
-    } else {
-      setButtonText(t('screens.onboarding.getStarted'))
+    if (!isNil(viewableItems[0].index)) {
+      if (viewableItems[0]?.index >= 1 && viewableItems[0]?.index < 4) {
+        setButtonText(t('screens.onboarding.next'))
+      } else {
+        setButtonText(t('screens.onboarding.getStarted'))
+      }
     }
   }).current
 
@@ -117,13 +118,13 @@ const OnboardingTemplate = (): React.ReactElement => {
         justifyContent="space-between"
       >
         <View flex={1} >
-          <TransparentButton title={t('screens.onboarding.login')}/>
+          <TransparentButton title={t('screens.onboarding.login')} />
         </View>
-        <Spacer height={23}/>
+        <Spacer height={23} />
         <View flex={1}>
           <PrimaryButton
             title={buttonText}
-            onPress={() => scrollToNext() }/>
+            onPress={() => scrollToNext()} />
         </View>
       </View>
 
@@ -135,7 +136,7 @@ const styles = StyleSheet.create({
   dot: {
     borderRadius: 14,
     height: 7,
-    marginHorizontal: 8
+    marginRight: 5
   }
 })
 

@@ -19,8 +19,7 @@ const OnboardingItem = (props: Props): React.ReactElement => {
     <View width={width}>
       <ImageBackground
         source={props.imgBackground}
-        style={styles.background}
-      >
+        style={styles.background}>
         <View
           style={{ ...StyleSheet.absoluteFillObject }}
           backgroundColor={colors.lightTransparentBlack} />
@@ -30,8 +29,7 @@ const OnboardingItem = (props: Props): React.ReactElement => {
             fontFamily={fonts.JetBrainsMonoBold}
             fontSize={33}
             color={colors.white}
-            textAlign="left"
-          >
+            textAlign="left">
             {props.content}
           </Text>
         </View>
