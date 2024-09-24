@@ -58,6 +58,10 @@ function RootLayoutNav (): React.ReactElement {
             name="(tabs)"
             options={{ headerShown: false, title: t('appTitle') }}
           />
+          <Stack.Screen
+            name="authentication/Login"
+            options={{ headerShown: false }}
+          />
         </Stack>
       </ThemeProvider>
     </TamaguiProvider>
