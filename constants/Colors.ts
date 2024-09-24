@@ -10,8 +10,8 @@ const colors: Record<'light' | 'dark', Colors> = {
     primaryTeal: '#156778',
     slateGray: '#50555C',
     text: '#fff',
-    white: '#fff'
-
+    white: '#fff',
+    lightTransparentBlack: 'rgba(0, 0, 0, 0.3)',
   },
   light: {
     blueSapphire: '#156778',
@@ -20,8 +20,8 @@ const colors: Record<'light' | 'dark', Colors> = {
     primaryTeal: '#156778',
     slateGray: '#50555C',
     text: '#000',
-    white: '#fff'
-
+    white: '#fff',
+    lightTransparentBlack: 'rgba(0, 0, 0, 0.3)'
   }
 }
 

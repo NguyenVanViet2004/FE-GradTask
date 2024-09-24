@@ -42,6 +42,11 @@
             "mobileNumber": "Mobile number",
             "TermsOfUse1": "By signing up you agree to our ",
             "TermsOfUse2": "Term of use and privacy notice"
+        },
+        "onboarding": {
+            "getStarted": "Get started",
+            "next": "Next",
+            "login": "Login"
         }
     }
 }
