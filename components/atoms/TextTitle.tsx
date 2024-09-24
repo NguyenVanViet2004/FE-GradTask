@@ -13,7 +13,6 @@ export const TextTitle = (props: Props): React.ReactElement => {
   return (
     <Text
       {...props}
-      marginTop={10}
       fontSize={14}
       color={colors.primaryTeal}
     >{props.text}</Text>

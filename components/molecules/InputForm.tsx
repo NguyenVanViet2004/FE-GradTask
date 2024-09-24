@@ -86,6 +86,7 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
       {
         !isNil(props.visibleForgotPassword) && props.visibleForgotPassword
           ? <TextTitle
+            marginTop={10}
             text={t('screens.login.forgotPassword')}
             textAlign="right"/>
           : <Text fontSize={14} textAlign="left" marginTop={10}>
