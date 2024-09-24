@@ -22,8 +22,8 @@ const OnboardingTemplate = (): React.ReactElement => {
   { viewableItems: ViewToken[] }) => {
     setCurrentIndex(viewableItems[0].index ?? 0)
     if (viewableItems[0]?.index === 1 ||
-          viewableItems[0].index === 2 ||
-          viewableItems[0].index === 3) {
+          viewableItems[0]?.index === 2 ||
+          viewableItems[0]?.index === 3) {
       setButtonText(t('screens.onboarding.next'))
     } else {
       setButtonText(t('screens.onboarding.getStarted'))
