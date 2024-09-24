@@ -8,7 +8,6 @@ import { useAppFonts } from '~/hooks/useAppFonts'
 
 type Props = {
   title: string
-  onPress?: () => void
 } & ButtonProps
 const TransparentButton = (props: Props): React.ReactElement => {
   const { fonts } = useAppFonts()
