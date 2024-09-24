@@ -11,7 +11,7 @@ import { TextTitle } from '~/components/atoms/TextTitle'
 import getColors from '~/constants/Colors'
 import useTranslation from '~/hooks/useTranslation'
 
-interface Props {
+type Props = {
   visibleRecoveryPassword?: boolean
   visibleInputWithIcons?: boolean
   visibleForgotPassword?: boolean
