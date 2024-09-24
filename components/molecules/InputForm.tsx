@@ -2,7 +2,7 @@ import { Eye, EyeOff, LockKeyhole, Mail, Phone, User2 } from '@tamagui/lucide-ic
 import { isNil } from 'lodash'
 import React, { useState } from 'react'
 import { useColorScheme } from 'react-native'
-import { Image, Text, View, YStack } from 'tamagui'
+import { Image, InputProps, Text, View, YStack } from 'tamagui'
 
 import InputWithIcons from '~/components/atoms/InputWithIcons'
 import { NegativeButton } from '~/components/atoms/NegativeButton'
@@ -19,7 +19,7 @@ type Props = {
   onChangeEmailText?: (text: string) => void
   onChangePhoneText?: (text: string) => void
   onChangePasswordText?: (text: string) => void
-}
+} & InputProps
 
 const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
   const colors = getColors(useColorScheme())
@@ -48,7 +48,7 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
             : 'none'}>
           <InputWithIcons
             iconRight={<User2 size={16} color={colors.primaryTeal} />}
-            placeholder={t('screens.signup.name')}
+            placeholder={t('screens.signUp.name')}
             onChangeText={props.onChangeNameText}
           />
 
@@ -68,7 +68,7 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
 
           <InputWithIcons
             iconRight={<Phone size={16} color={colors.primaryTeal} />}
-            placeholder={t('screens.signup.mobileNumber')}
+            placeholder={t('screens.signUp.mobileNumber')}
             onChangeText={props.onChangePhoneText}
           />
 
@@ -90,8 +90,8 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
             text={t('screens.login.forgotPassword')}
             textAlign="right"/>
           : <Text fontSize={14} textAlign="left" marginTop={10}>
-            {t('screens.signup.TermsOfUse1')}
-            <TextTitle text={t('screens.signup.TermsOfUse2')}/>
+            {t('screens.signUp.TermsOfUse1')}
+            <TextTitle text={t('screens.signUp.TermsOfUse2')}/>
           </Text>
       }
 
