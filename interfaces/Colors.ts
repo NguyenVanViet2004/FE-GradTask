@@ -3,4 +3,5 @@ export interface Colors {
   blueSapphire: string
   gray: string
   white: string
+  lightTransparentBlack: string
 }
