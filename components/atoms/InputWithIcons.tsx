@@ -26,7 +26,6 @@ const InputWithIcons: React.FC<Props> = (props: Props) => {
       borderRadius={10}
       paddingHorizontal={24}
       style={inputContainerStyle}
-
     >
       {!isNil(props.iconRight) && props.iconRight}
 
