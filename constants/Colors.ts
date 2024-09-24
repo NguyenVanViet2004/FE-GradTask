@@ -6,12 +6,14 @@ const colors: Record<'light' | 'dark', Colors> = {
   dark: {
     blueSapphire: '#156778',
     gray: '#757575',
-    text: '#fff'
+    text: '#fff',
+    white: '#FFFFFF'
   },
   light: {
     blueSapphire: '#156778',
     gray: '#757575',
-    text: '#000'
+    text: '#000',
+    white: '#FFFFFF'
   }
 }
 
