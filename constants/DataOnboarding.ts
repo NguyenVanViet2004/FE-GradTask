@@ -6,7 +6,7 @@ interface DataOnboarding {
 const dataOnboarding: DataOnboarding[] = [
   {
     backgroungImg: require('assets/images/onboardingImg1.png'),
-    content: 'Schedule your Appointment' +
+    content: 'Schedule your Appointment ' +
       'with the best Hair Stylist in your Town.',
     id: '1'
   },
@@ -22,7 +22,7 @@ const dataOnboarding: DataOnboarding[] = [
   },
   {
     backgroungImg: require('assets/images/onboardingImg4.png'),
-    content: 'Search for the best parlournear' +
+    content: 'Search for the best parlournear ' +
       'you to fulfil all your beauty needs',
     id: '4'
   }

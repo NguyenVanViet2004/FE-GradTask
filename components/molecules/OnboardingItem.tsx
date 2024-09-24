@@ -3,6 +3,7 @@ import { Dimensions, ImageBackground, StyleSheet, useColorScheme } from 'react-n
 import { Text, View } from 'tamagui'
 
 import getColors from '~/constants/Colors'
+import { useAppFonts } from '~/hooks/useAppFonts'
 
 interface Props {
   content: string
@@ -13,7 +14,7 @@ const { width } = Dimensions.get('window')
 
 const OnboardingItem = (props: Props): React.ReactElement => {
   const colors = getColors(useColorScheme())
-
+  const { fonts } = useAppFonts()
   return (
     <View width={width}>
       <ImageBackground
@@ -21,18 +22,16 @@ const OnboardingItem = (props: Props): React.ReactElement => {
         style={styles.background}
       >
         <View style={styles.overlay} backgroundColor={'rgba(0, 0, 0, 0.3)'} />
-        <View flex={1}>
-          <View flex={3} />
-          <View flex={2} marginHorizontal={16}>
-            <Text
-              fontSize={33}
-              color={colors.white}
-              fontWeight={'bold'}
-              textAlign="left"
-            >
-              {props.content}
-            </Text>
-          </View>
+
+        <View marginHorizontal={16} marginTop={'60%'}>
+          <Text
+            fontFamily={fonts.JetBrainsMonoBold}
+            fontSize={33}
+            color={colors.white}
+            textAlign="left"
+          >
+            {props.content}
+          </Text>
         </View>
 
       </ImageBackground>
