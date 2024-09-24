@@ -16,24 +16,22 @@ const Footer: React.FC<Props> = (
   const colors = getColors(useColorScheme())
 
   return (
-    <XStack justifyContent="center" alignItems="flex-end" >
-      <XStack justifyContent="center" gap={8} marginBottom={10}>
-        <Text
-          fontSize={14}
-          color={colors.slateGray}
-          textAlign="center">
-          {title}
-        </Text>
+    <XStack justifyContent="center" alignItems="flex-end" gap={8} >
+      <Text
+        fontSize={14}
+        color={colors.slateGray}
+        textAlign="center">
+        {title}
+      </Text>
 
-        <Text
-          onPress={onPressAuthScreen}
-          fontSize={14}
-          color={colors.primaryTeal}
-        >
-          {subtitle}
-        </Text>
-
-      </XStack>
+      <Text
+        onPress={onPressAuthScreen}
+        fontSize={14}
+        fontFamily={'JetBrainsMonoBold'}
+        color={colors.primaryTeal}
+      >
+        {subtitle}
+      </Text>
     </XStack>
 
   )

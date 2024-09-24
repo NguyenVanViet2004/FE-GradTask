@@ -14,7 +14,10 @@ const ContentTitle: React.FC<Props> = ({ title, subtitle }) => {
 
   return (
     <YStack gap={10}>
-      <Text fontWeight={'bold'} fontSize={24} color={colors.primaryTeal}>
+      <Text
+        fontSize={24}
+        fontFamily={'JetBrainsMonoBold'}
+        color={colors.primaryTeal}>
         {title}
       </Text>
       <Text fontSize={14} color={colors.slateGray}>{subtitle}</Text>

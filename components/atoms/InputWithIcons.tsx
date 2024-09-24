@@ -12,7 +12,7 @@ type Props = {
 
 const InputWithIcons: React.FC<Props> = (props: Props) => {
   const colors = getColors(useColorScheme())
-  const [isFocused, setIsFocused] = useState(false)
+  const [isFocused, setIsFocused] = useState<boolean>(false)
 
   const inputContainerStyle = {
     backgroundColor: isFocused ? colors.white : colors.lightMist,
@@ -34,7 +34,8 @@ const InputWithIcons: React.FC<Props> = (props: Props) => {
         {...props}
         unstyled
         marginHorizontal={18}
-        height={54}
+        paddingVertical={14}
+        fontFamily={'JetBrainsMonoRegular'}
         fontSize={16}
         color={colors.primaryTeal}
         flex={1}
