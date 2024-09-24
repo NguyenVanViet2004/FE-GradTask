@@ -2,11 +2,9 @@ import { Eye, EyeOff, LockKeyhole, Mail, Phone, User2 } from '@tamagui/lucide-ic
 import { isNil } from 'lodash'
 import React, { useState } from 'react'
 import { useColorScheme } from 'react-native'
-import { Image, type InputProps, Text, View, YStack } from 'tamagui'
+import { type InputProps, Text, View, YStack } from 'tamagui'
 
 import InputWithIcons from '~/components/atoms/InputWithIcons'
-import { NegativeButton } from '~/components/atoms/NegativeButton'
-import { PositiveButton } from '~/components/atoms/PositiveButton'
 import { TextTitle } from '~/components/atoms/TextTitle'
 import getColors from '~/constants/Colors'
 import useTranslation from '~/hooks/useTranslation'
@@ -94,25 +92,6 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
             <TextTitle text={t('screens.signUp.TermsOfUse2')}/>
           </Text>
       }
-
-      <YStack gap={20} marginTop={20}>
-        <PositiveButton title={t('screens.login.signIn')} />
-
-        <View flexDirection="row" alignItems="center" justifyContent="center">
-          <View borderWidth={0.5} flex={1} borderColor={colors.slateGray} />
-
-          <Text marginHorizontal={20} color={colors.slateGray} >or</Text>
-
-          <View borderWidth={0.5} flex={1} borderColor={colors.slateGray} />
-        </View>
-
-        <NegativeButton
-          title={t('screens.login.signInWithGoogle')}
-          icon={
-            <Image src={require('~/assets/images/iconGoogle.png')} />
-          }
-        />
-      </YStack>
 
     </View>
   )
