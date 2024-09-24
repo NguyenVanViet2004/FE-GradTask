@@ -18,6 +18,7 @@ const TransparentButton = (props: Props): React.ReactElement => {
       bg="$colorTransparent"
       borderRadius={RADIUS_BUTTON}
       borderColor={colors.white}
+      pressStyle={{ backgroundColor: colors.gray }}
       borderWidth={1}>
       <Text
         fontFamily={fonts.JetBrainsMonoBold}

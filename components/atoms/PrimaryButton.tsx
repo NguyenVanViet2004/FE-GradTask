@@ -16,6 +16,7 @@ const PrimaryButton = (props: Props): React.ReactElement => {
       backgroundColor={colors.white}
       borderRadius={RADIUS_BUTTON}
       alignItems="center"
+      pressStyle={{ backgroundColor: colors.gray }}
       onPress={props.onPress}>
       <Text
         color={colors.blueSapphire}
