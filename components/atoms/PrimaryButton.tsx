@@ -7,17 +7,16 @@ import { useAppFonts } from '~/hooks/useAppFonts'
 
 type Props = {
   title: string
-  onPress?: () => void
 } & ButtonProps
 const PrimaryButton = (props: Props): React.ReactElement => {
   const { fonts } = useAppFonts()
   const colors = getColors(useColorScheme())
   return (
     <Button
+      backgroundColor={colors.white}
       borderRadius={RADIUS_BUTTON}
       alignItems="center"
-      onPress={props.onPress}
-    >
+      onPress={props.onPress}>
       <Text
         color={colors.blueSapphire}
         fontFamily={fonts.JetBrainsMonoBold}
