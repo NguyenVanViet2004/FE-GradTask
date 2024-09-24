@@ -36,7 +36,7 @@ const InputWithIcons: React.FC<Props> = (props: Props) => {
         marginHorizontal={18}
         height={54}
         fontSize={16}
-        color={'#156778'}
+        color={colors.primaryTeal}
         flex={1}
         onFocus={() => { setIsFocused(true) }}
         onBlur={() => { setIsFocused(false) }}
