@@ -10,7 +10,7 @@ interface Props {
   onPressAuthScreen?: () => void
 }
 
-const Footer: React.FC<Props> = (
+const FooterComponent: React.FC<Props> = (
   { title, subtitle, onPressAuthScreen }
 ) => {
   const colors = getColors(useColorScheme())
@@ -37,4 +37,4 @@ const Footer: React.FC<Props> = (
   )
 }
 
-export default Footer
+export default FooterComponent
