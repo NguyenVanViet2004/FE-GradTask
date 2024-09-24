@@ -48,7 +48,7 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
             : 'none'}>
           <InputWithIcons
             iconRight={<User2 size={16} color={colors.primaryTeal} />}
-            placeholder={t('signup.name')}
+            placeholder={t('screens.signup.name')}
             onChangeText={props.onChangeNameText}
           />
 
@@ -56,7 +56,7 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
 
         <InputWithIcons
           iconRight={<Mail size={16} color={colors.primaryTeal} />}
-          placeholder={t('login.email')}
+          placeholder={t('screens.login.email')}
           onChangeText={props.onChangeEmailText}
         />
 
@@ -68,7 +68,7 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
 
           <InputWithIcons
             iconRight={<Phone size={16} color={colors.primaryTeal} />}
-            placeholder={t('signup.mobileNumber')}
+            placeholder={t('screens.signup.mobileNumber')}
             onChangeText={props.onChangePhoneText}
           />
 
@@ -77,7 +77,7 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
         <InputWithIcons
           iconLeft={renderPasswordIcon()}
           iconRight={<LockKeyhole size={16} color={colors.primaryTeal} />}
-          placeholder={t('login.password')}
+          placeholder={t('screens.login.password')}
           secureTextEntry={!showPassword}
           onChangeText={props.onChangePasswordText}
         />
@@ -85,15 +85,15 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
 
       {
         !isNil(props.visibleForgotPassword) && props.visibleForgotPassword
-          ? <TextTitle text={t('login.forgotPassword')} textAlign="right"/>
+          ? <TextTitle text={t('screens.login.forgotPassword')} textAlign="right"/>
           : <Text fontSize={14} textAlign="left" marginTop={10}>
-            {t('signup.TermsOfUse1')}
-            <TextTitle text={t('signup.TermsOfUse2')}/>
+            {t('screens.signup.TermsOfUse1')}
+            <TextTitle text={t('screens.signup.TermsOfUse2')}/>
           </Text>
       }
 
       <YStack gap={20} marginTop={20}>
-        <PositiveButton title={t('login.signIn')} />
+        <PositiveButton title={t('screens.login.signIn')} />
 
         <View flexDirection="row" alignItems="center" justifyContent="center">
           <View borderWidth={0.5} flex={1} borderColor={colors.slateGray} />
@@ -104,7 +104,7 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
         </View>
 
         <NegativeButton
-          title={t('login.signInWithGoogle')}
+          title={t('screens.login.signInWithGoogle')}
           icon={
             <Image src={require('~/assets/images/iconGoogle.png')} />
           }

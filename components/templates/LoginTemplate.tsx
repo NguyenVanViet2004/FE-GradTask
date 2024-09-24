@@ -18,8 +18,8 @@ const LoginTemplate: React.FC = (): JSX.Element => {
 
       <View marginTop={30}>
         <ContentTitle
-          title={t('login.welcomeBack')}
-          subtitle={t('login.loginPrompt')}
+          title={t('screens.login.welcomeBack')}
+          subtitle={t('screens.login.loginPrompt')}
         />
       </View>
 
@@ -33,8 +33,8 @@ const LoginTemplate: React.FC = (): JSX.Element => {
 
       <View flex={1} justifyContent="flex-end" >
         <Footer
-          title={t('login.signupPrompt')}
-          subtitle={t('login.joinNow')}
+          title={t('screens.login.signupPrompt')}
+          subtitle={t('screens.login.joinNow')}
         />
       </View>
 
