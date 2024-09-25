@@ -15,7 +15,7 @@ const InputWithIcons: React.FC<Props> = (props: Props) => {
   const [isFocused, setIsFocused] = useState<boolean>(false)
 
   const inputContainerStyle = {
-    backgroundColor: isFocused ? colors.white : colors.lightMist,
+    backgroundColor: isFocused ? colors.inputBackground : colors.lightMist,
     borderColor: isFocused ? colors.primaryTeal : colors.lightMist,
     borderWidth: isFocused ? 1 : 0
   }

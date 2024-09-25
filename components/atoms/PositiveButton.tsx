@@ -15,9 +15,9 @@ export const PositiveButton = (props: Props): React.ReactElement => {
     <Button
       {...props}
       unstyled
+      pressStyle={{ backgroundColor: colors.gray }}
       alignItems="center"
       paddingVertical={16}
-      fontFamily={'JetBrainsMonoBold'}
       fontSize={16}
       color={colors.white}
       backgroundColor={colors.primaryTeal}

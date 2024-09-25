@@ -21,7 +21,9 @@ const LoginTemplate: React.FC = (): JSX.Element => {
   }
 
   return (
-    <SafeAreaView style={[styles.container, { backgroundColor: colors.white }]}>
+    <SafeAreaView
+      style={[styles.container,
+        { backgroundColor: colors.backGround }]}>
 
       <View gap={100} marginTop={30}>
         <ContentTitle
