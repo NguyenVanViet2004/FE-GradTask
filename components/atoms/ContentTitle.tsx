@@ -20,7 +20,7 @@ const ContentTitle: React.FC<Props> = ({ title, subtitle }) => {
         color={colors.text}>
         {title}
       </Text>
-      <Text fontSize={14} color={colors.slateGray}>{subtitle}</Text>
+      <Text fontSize={14} color={colors.gray}>{subtitle}</Text>
     </YStack>
   )
 }

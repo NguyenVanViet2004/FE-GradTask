@@ -24,6 +24,8 @@ export const NegativeButton = (props: Props): React.ReactElement => {
       borderWidth={1}
       borderColor={colors.primaryTeal}
       borderRadius={RADIUS_BUTTON}
+      backgroundColor={colors.white}
+      color={colors.textButton}
       icon={props.icon}
     >
       {props.title}

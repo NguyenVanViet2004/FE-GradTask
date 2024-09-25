@@ -19,7 +19,7 @@ const FooterComponent: React.FC<Props> = (
     <XStack justifyContent="center" alignItems="flex-end" gap={8} >
       <Text
         fontSize={14}
-        color={colors.slateGray}
+        color={colors.gray}
         textAlign="center">
         {title}
       </Text>
