@@ -2,9 +2,11 @@ import { Eye, EyeOff, LockKeyhole, Mail, Phone, User2 } from '@tamagui/lucide-ic
 import { isNil } from 'lodash'
 import React, { useState } from 'react'
 import { useColorScheme } from 'react-native'
-import { type InputProps, Text, View, YStack } from 'tamagui'
+import { Image, type InputProps, Separator, Text, View, YStack } from 'tamagui'
 
 import InputWithIcons from '~/components/atoms/InputWithIcons'
+import { NegativeButton } from '~/components/atoms/NegativeButton'
+import { PositiveButton } from '~/components/atoms/PositiveButton'
 import { TextTitle } from '~/components/atoms/TextTitle'
 import getColors from '~/constants/Colors'
 import useTranslation from '~/hooks/useTranslation'
@@ -13,10 +15,13 @@ type Props = {
   visibleRecoveryPassword?: boolean
   visibleInputWithIcons?: boolean
   visibleForgotPassword?: boolean
+  visibleSeparator?: boolean
   onChangeNameText?: (text: string) => void
   onChangeEmailText?: (text: string) => void
   onChangePhoneText?: (text: string) => void
   onChangePasswordText?: (text: string) => void
+  onLoginPress?: () => void
+  onLoginGooglePress?: () => void
 } & InputProps
 
 const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
@@ -92,6 +97,42 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
             <TextTitle text={t('screens.signUp.TermsOfUse2')}/>
           </Text>
       }
+
+      <Separator borderWidth={0} marginTop={120} display={
+        !isNil(props.visibleSeparator) &&
+                        props.visibleSeparator
+          ? 'flex'
+          : 'none'}/>
+
+      <YStack gap={20} marginTop={10}>
+        <PositiveButton
+          onPress={props.onLoginPress}
+          title={t('screens.login.signIn')} />
+
+        <View flexDirection="row" alignItems="center" justifyContent="center">
+          <View
+            borderBottomWidth={0.5}
+            flex={1}
+            borderColor={colors.slateGray} />
+
+          <Text marginHorizontal={20} color={colors.text} >or</Text>
+
+          <View
+            borderBottomWidth={0.5}
+            flex={1}
+            borderColor={colors.slateGray} />
+        </View>
+
+        <NegativeButton
+          onPress={props.onLoginGooglePress}
+          title={t('screens.login.signInWithGoogle')}
+          backgroundColor={colors.white}
+          color={colors.labelButton}
+          icon={
+            <Image src={require('~/assets/images/iconGoogle.png')} />
+          }
+        />
+      </YStack>
 
     </View>
   )
