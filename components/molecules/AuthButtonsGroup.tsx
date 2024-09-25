@@ -24,11 +24,11 @@ const AuthButtonsGroup: React.FC<Props> = (props: Props): JSX.Element => {
         title={t('screens.login.signIn')}/>
 
       <View flexDirection="row" alignItems="center" justifyContent="center">
-        <View borderWidth={0.5} flex={1} borderColor={colors.slateGray} />
+        <View borderBottomWidth={0.5} flex={1} borderColor={colors.slateGray} />
 
-        <Text marginHorizontal={20} color={colors.slateGray} >or</Text>
+        <Text marginHorizontal={20} color={colors.text} >or</Text>
 
-        <View borderWidth={0.5} flex={1} borderColor={colors.slateGray} />
+        <View borderBottomWidth={0.5} flex={1} borderColor={colors.slateGray} />
       </View>
 
       <NegativeButton

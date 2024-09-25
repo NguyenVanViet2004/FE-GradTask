@@ -3,6 +3,7 @@ import React from 'react'
 import { StyleSheet, useColorScheme } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { View } from 'tamagui'
+import { LinearGradient } from 'tamagui/linear-gradient'
 
 import ContentTitle from '~/components/atoms/ContentTitle'
 import AuthButtonsGroup from '~/components/molecules/AuthButtonsGroup'
@@ -21,42 +22,48 @@ const LoginTemplate: React.FC = (): JSX.Element => {
   }
 
   return (
-    <SafeAreaView
-      style={[styles.container,
-        { backgroundColor: colors.backGround }]}>
+    <LinearGradient
+      colors={[colors.darkBlue, colors.backGround]}
+      start={[1, 1]}
+      end={[0, 0]}
+      flex={1}
+    >
+      <SafeAreaView
+        style={styles.container}>
 
-      <View gap={100} marginTop={30}>
-        <ContentTitle
-          title={t('screens.login.welcomeBack')}
-          subtitle={t('screens.login.loginPrompt')}
-        />
+        <View gap={120} marginTop={50}>
+          <ContentTitle
+            title={t('screens.login.welcomeBack')}
+            subtitle={t('screens.login.loginPrompt')}
+          />
 
-        <InputForm
-          visibleInputWithIcons={false}
-          visibleForgotPassword={true}
-        />
+          <InputForm
+            visibleInputWithIcons={false}
+            visibleForgotPassword={true}
+          />
 
-        <AuthButtonsGroup
-          onLoginPress={ButtonLogin}
-          onLoginGooglePress={ButtonLogin}
-        />
-      </View>
+          <AuthButtonsGroup
+            onLoginPress={ButtonLogin}
+            onLoginGooglePress={ButtonLogin}
+          />
+        </View>
 
-      <View flex={1} justifyContent="flex-end" >
-        <Footer
-          title={t('screens.login.signupPrompt')}
-          subtitle={t('screens.login.joinNow')}
-        />
-      </View>
+        <View flex={1} justifyContent="flex-end" >
+          <Footer
+            title={t('screens.login.signupPrompt')}
+            subtitle={t('screens.login.joinNow')}
+          />
+        </View>
 
-    </SafeAreaView>
+      </SafeAreaView>
+
+    </LinearGradient>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    gap: 20,
     padding: 20
   }
 })
