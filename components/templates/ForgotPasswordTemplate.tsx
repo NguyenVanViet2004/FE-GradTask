@@ -6,13 +6,12 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { TamaguiProvider, YStack } from 'tamagui'
 
 import ContentTitle from '~/components/atoms/ContentTitle'
+import InputWithIcons from '~/components/atoms/InputWithIcons'
+import { PositiveButton } from '~/components/atoms/PositiveButton'
+import { TextTitle } from '~/components/atoms/TextTitle'
 import getColors from '~/constants/Colors'
 import useTranslation from '~/hooks/useTranslation'
 import config from '~/tamagui.config'
-
-import InputWithIcons from '../atoms/InputWithIcons'
-import { PositiveButton } from '../atoms/PositiveButton'
-import { TextTitle } from '../atoms/TextTitle'
 
 const ForgotTemplate: React.FC = (): JSX.Element => {
   const { t } = useTranslation()
@@ -104,7 +103,8 @@ const ForgotTemplate: React.FC = (): JSX.Element => {
                 />
               </YStack>
 
-              <PositiveButton title={t('screens.forgot.sendCode')} />
+              <PositiveButton title={t('screens.forgot.sendCode')}
+                onPress={() => {}} />
             </YStack>)}
       </SafeAreaView>
     </TamaguiProvider>

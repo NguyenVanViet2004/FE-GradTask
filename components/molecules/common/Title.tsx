@@ -3,7 +3,7 @@ import { useColorScheme } from 'react-native'
 import { Text, XStack } from 'tamagui'
 
 import getColors from '~/constants/Colors'
-
+import { useAppFonts } from '~/hooks/useAppFonts'
 interface Props {
   title: string
   subtitle?: string
@@ -14,6 +14,7 @@ const FooterComponent: React.FC<Props> = (
   { title, subtitle, onPressAuthScreen }
 ) => {
   const colors = getColors(useColorScheme())
+  const { fonts } = useAppFonts()
 
   return (
     <XStack justifyContent="center" alignItems="flex-end" gap={8} >
@@ -27,7 +28,7 @@ const FooterComponent: React.FC<Props> = (
       <Text
         onPress={onPressAuthScreen}
         fontSize={14}
-        fontFamily={'JetBrainsMonoBold'}
+        fontFamily={fonts.JetBrainsMonoBold}
         color={colors.primaryTeal}
       >
         {subtitle}
