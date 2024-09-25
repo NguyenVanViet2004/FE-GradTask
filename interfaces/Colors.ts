@@ -6,6 +6,7 @@ export interface Colors {
   primaryTeal: string
   blueSapphire: string
   gray: string
-  white: string
   lightTransparentBlack: string
+  backGround: string
+  inputBackground: string
 }
