@@ -9,4 +9,7 @@ export interface Colors {
   lightTransparentBlack: string
   backGround: string
   inputBackground: string
+  black: string
+  textButton: string
+  darkBlue: string
 }
