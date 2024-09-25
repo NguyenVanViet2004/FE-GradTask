@@ -47,6 +47,15 @@
             "getStarted": "Bắt đầu",
             "next": "Tiếp",
             "login": "Đăng nhập"
+        },
+        "forgot":{
+            "emailAddress": "Địa chỉ Email",
+            "usePhoneNumber": "Sử dụng số điện thoại",
+            "useEmailAddress": "Sử dụng địa chỉ Email",
+            "phoneNumber": "Số điện thoại",
+            "sendCode": "Nhập mã code",
+            "titleForgot": "Vui lòng nhập email của bạn bên dưới và chúng tôi sẽ cung cấp cho bạn mã OTP",
+            "forgotPassword": "Quên mật khẩu"
         }
     }
 }
