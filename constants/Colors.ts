@@ -10,12 +10,12 @@ const colors: Record<'light' | 'dark', Colors> = {
     darkBlue: '#3548A3',
     gray: '#757575',
     inputBackground: '#1C2655',
+    labelButton: '#000000',
     lightMist: '#1C2655',
     lightTransparentBlack: 'rgba(0, 0, 0, 0.3)',
     primaryTeal: '#156778',
     slateGray: '#D1D5DB',
     text: '#fff',
-    textButton: '#000000',
     white: '#FFFFFF'
   },
   light: {
@@ -25,12 +25,12 @@ const colors: Record<'light' | 'dark', Colors> = {
     darkBlue: '#FFFFFF',
     gray: '#757575',
     inputBackground: '#FFFFFF',
+    labelButton: '#156778',
     lightMist: '#F0F3F6',
     lightTransparentBlack: 'rgba(0, 0, 0, 0.3)',
     primaryTeal: '#156778',
     slateGray: '#50555C',
     text: '#000',
-    textButton: '#156778',
     white: '#FFFFFF'
   }
 }

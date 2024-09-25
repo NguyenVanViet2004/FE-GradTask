@@ -10,6 +10,6 @@ export interface Colors {
   backGround: string
   inputBackground: string
   black: string
-  textButton: string
+  labelButton: string
   darkBlue: string
 }
