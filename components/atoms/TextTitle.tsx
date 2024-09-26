@@ -11,7 +11,7 @@ type Props = {
 
 export const TextTitle = (props: Props): React.ReactElement => {
   const colors = getColors(useColorScheme())
-  const { fonts } = useAppFonts();
+  const { fonts } = useAppFonts()
 
   return (
     <Text

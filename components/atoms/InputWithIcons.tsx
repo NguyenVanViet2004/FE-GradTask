@@ -13,7 +13,7 @@ type Props = {
 
 const InputWithIcons: React.FC<Props> = (props: Props) => {
   const colors = getColors(useColorScheme())
-  const { fonts } = useAppFonts();
+  const { fonts } = useAppFonts()
   const [isFocused, setIsFocused] = useState<boolean>(false)
 
   const inputContainerStyle = {
