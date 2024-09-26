@@ -21,7 +21,7 @@ export const NegativeButton = (props: Props): React.ReactElement => {
       flexDirection="row"
       fontSize={16}
       borderWidth={1}
-      borderColor={colors.primaryTeal}
+      borderColor={colors.oceanTeal}
       borderRadius={RADIUS_BUTTON}
     >
       {props.title}

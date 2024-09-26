@@ -34,7 +34,7 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
     return (
       <IconVisiablePassword
         size={16}
-        color={colors.primaryTeal}
+        color={colors.oceanTeal}
         onPress={() => { setShowPassword(!showPassword) }}
       />
     )
@@ -50,7 +50,7 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
             ? 'flex'
             : 'none'}>
           <InputWithIcons
-            iconRight={<User2 size={16} color={colors.primaryTeal} />}
+            iconRight={<User2 size={16} color={colors.oceanTeal} />}
             placeholder={t('screens.signUp.name')}
             onChangeText={props.onChangeNameText}
           />
@@ -58,7 +58,7 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
         </View>
 
         <InputWithIcons
-          iconRight={<Mail size={16} color={colors.primaryTeal} />}
+          iconRight={<Mail size={16} color={colors.oceanTeal} />}
           placeholder={t('screens.login.email')}
           onChangeText={props.onChangeEmailText}
         />
@@ -70,7 +70,7 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
             : 'none'}>
 
           <InputWithIcons
-            iconRight={<Phone size={16} color={colors.primaryTeal} />}
+            iconRight={<Phone size={16} color={colors.oceanTeal} />}
             placeholder={t('screens.signUp.mobileNumber')}
             onChangeText={props.onChangePhoneText}
           />
@@ -79,7 +79,7 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
 
         <InputWithIcons
           iconLeft={renderPasswordIcon()}
-          iconRight={<LockKeyhole size={16} color={colors.primaryTeal} />}
+          iconRight={<LockKeyhole size={16} color={colors.oceanTeal} />}
           placeholder={t('screens.login.password')}
           secureTextEntry={!showPassword}
           onChangeText={props.onChangePasswordText}
@@ -89,10 +89,10 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
       {
         !isNil(props.visibleForgotPassword) && props.visibleForgotPassword
           ? <TextTitle
-            marginTop={10}
+            marginTop={20}
             text={t('screens.login.forgotPassword')}
             textAlign="right"/>
-          : <Text fontSize={14} textAlign="left" marginTop={10}>
+          : <Text fontSize={14} textAlign="left" marginTop={20}>
             {t('screens.signUp.TermsOfUse1')}
             <TextTitle text={t('screens.signUp.TermsOfUse2')}/>
           </Text>
@@ -104,23 +104,23 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
           ? 'flex'
           : 'none'}/>
 
-      <YStack gap={20} marginTop={10}>
+      <YStack gap={20} marginTop={20}>
         <PositiveButton
           onPress={props.onLoginPress}
           title={t('screens.login.signIn')} />
 
         <View flexDirection="row" alignItems="center" justifyContent="center">
           <View
-            borderBottomWidth={0.5}
+            borderBottomWidth={1}
             flex={1}
-            borderColor={colors.slateGray} />
+            borderColor={colors.oceanMist} />
 
           <Text marginHorizontal={20} color={colors.text} >or</Text>
 
           <View
-            borderBottomWidth={0.5}
+            borderBottomWidth={1}
             flex={1}
-            borderColor={colors.slateGray} />
+            borderColor={colors.oceanMist} />
         </View>
 
         <NegativeButton

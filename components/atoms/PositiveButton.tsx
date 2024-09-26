@@ -20,7 +20,7 @@ export const PositiveButton = (props: Props): React.ReactElement => {
       paddingVertical={16}
       fontSize={16}
       color={colors.white}
-      backgroundColor={colors.primaryTeal}
+      backgroundColor={colors.blueSapphire}
       borderRadius={RADIUS_BUTTON}
     >{props.title}</Button>
   )

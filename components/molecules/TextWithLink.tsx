@@ -20,13 +20,13 @@ const TextWithLink: React.FC<Props> = (
     <XStack justifyContent="center" alignItems="flex-end" gap={8} >
       <Text
         fontSize={14}
-        color={colors.gray}
+        color={colors.oceanMist}
       >{heading}</Text>
 
       <TextTitle
         text={linkText}
         onPress={onLinkPress}
-        color={colors.primaryTeal}
+        color={colors.oceanTeal}
       />
     </XStack>
 

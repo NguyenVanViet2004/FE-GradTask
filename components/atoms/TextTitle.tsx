@@ -18,7 +18,7 @@ export const TextTitle = (props: Props): React.ReactElement => {
       {...props}
       fontSize={14}
       fontFamily={fonts.JetBrainsMonoBold}
-      color={colors.primaryTeal}
+      color={colors.oceanTeal}
     >{props.text}</Text>
   )
 }

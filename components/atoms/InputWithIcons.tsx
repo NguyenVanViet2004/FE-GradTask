@@ -19,7 +19,7 @@ const InputWithIcons: React.FC<Props> = (props: Props) => {
 
   const inputContainerStyle = {
     backgroundColor: isFocused ? colors.inputBackground : colors.lightMist,
-    borderColor: isFocused ? colors.primaryTeal : colors.lightMist,
+    borderColor: isFocused ? colors.oceanTeal : colors.lightMist,
     borderWidth: isFocused ? 1 : 0
   }
 
@@ -39,7 +39,8 @@ const InputWithIcons: React.FC<Props> = (props: Props) => {
         paddingVertical={14}
         fontFamily={fonts.JetBrainsMonoRegular}
         fontSize={16}
-        color={colors.primaryTeal}
+        color={colors.oceanTeal}
+        placeholderTextColor={colors.placeholderColor}
         flex={1}
         onFocus={() => { setIsFocused(true) }}
         onBlur={() => { setIsFocused(false) }}
