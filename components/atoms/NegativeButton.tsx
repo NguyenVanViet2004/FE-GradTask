@@ -3,7 +3,7 @@ import { useColorScheme } from 'react-native'
 import { Button, type ButtonProps } from 'tamagui'
 
 import getColors from '~/constants/Colors'
-import { RADIUS_BUTTON } from '~/constants/Constants'
+import { HEIGHT_BUTTON, RADIUS_BUTTON } from '~/constants/Constants'
 
 type Props = {
   title: string
@@ -14,10 +14,8 @@ export const NegativeButton = (props: Props): React.ReactElement => {
   return (
     <Button
       {...props}
-      unstyled
-      pressStyle={{ backgroundColor: colors.gray }}
       justifyContent="center"
-      paddingVertical={16}
+      height={HEIGHT_BUTTON}
       flexDirection="row"
       fontSize={16}
       borderWidth={1}

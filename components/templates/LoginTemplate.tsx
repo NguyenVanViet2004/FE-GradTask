@@ -41,7 +41,7 @@ const LoginTemplate: React.FC = (): JSX.Element => {
           />
         </View>
 
-        <View flex={1} justifyContent="center" >
+        <View flex={1} justifyContent="flex-end" >
           <TextWithLink
             heading={t('screens.login.signupPrompt')}
             linkText={t('screens.login.joinNow')}
