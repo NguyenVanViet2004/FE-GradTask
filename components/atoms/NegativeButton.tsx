@@ -7,7 +7,6 @@ import { RADIUS_BUTTON } from '~/constants/Constants'
 
 type Props = {
   title: string
-  icon?: JSX.Element
 } & ButtonProps
 
 export const NegativeButton = (props: Props): React.ReactElement => {
@@ -24,7 +23,6 @@ export const NegativeButton = (props: Props): React.ReactElement => {
       borderWidth={1}
       borderColor={colors.primaryTeal}
       borderRadius={RADIUS_BUTTON}
-      icon={props.icon}
     >
       {props.title}
     </Button>
