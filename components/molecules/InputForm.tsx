@@ -11,6 +11,11 @@ import { TextTitle } from '~/components/atoms/TextTitle'
 import getColors from '~/constants/Colors'
 import useTranslation from '~/hooks/useTranslation'
 
+import { SvgXml } from 'react-native-svg';
+import { SPACING_20 } from '~/constants/Constants'
+// import IconGoogle from '../../assets/images/IconGoogle.svg'
+
+
 type Props = {
   visibleRecoveryPassword?: boolean
   visibleInputWithIcons?: boolean
@@ -89,38 +94,31 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
       {
         !isNil(props.visibleForgotPassword) && props.visibleForgotPassword
           ? <TextTitle
-            marginTop={20}
+            marginTop={SPACING_20}
             text={t('screens.login.forgotPassword')}
             textAlign="right"/>
-          : <Text fontSize={14} textAlign="left" marginTop={20}>
+          : <Text fontSize={14} textAlign="left" marginTop={SPACING_20}>
             {t('screens.signUp.TermsOfUse1')}
             <TextTitle text={t('screens.signUp.TermsOfUse2')}/>
           </Text>
       }
 
-      <Separator borderWidth={0} marginTop={120} display={
+      <View marginTop={'25%'} display={
         !isNil(props.visibleSeparator) &&
                         props.visibleSeparator
           ? 'flex'
-          : 'none'}/>
+          : 'none'}
+      />
 
-      <YStack gap={20} marginTop={20}>
+      <YStack gap={20} marginTop={SPACING_20}>
         <PositiveButton
           onPress={props.onLoginPress}
           title={t('screens.login.signIn')} />
 
         <View flexDirection="row" alignItems="center" justifyContent="center">
-          <View
-            borderBottomWidth={1}
-            flex={1}
-            borderColor={colors.oceanMist} />
-
-          <Text marginHorizontal={20} color={colors.text} >or</Text>
-
-          <View
-            borderBottomWidth={1}
-            flex={1}
-            borderColor={colors.oceanMist} />
+          <Separator borderColor={colors.oceanMist}/> 
+          <Text marginHorizontal={SPACING_20} color={colors.text} >or</Text>
+          <Separator borderColor={colors.oceanMist}/> 
         </View>
 
         <NegativeButton
@@ -129,7 +127,10 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
           backgroundColor={colors.white}
           color={colors.labelButton}
           icon={
-            <Image src={require('~/assets/images/iconGoogle.png')} />
+            <Image 
+            width={SPACING_20} 
+            height={SPACING_20} 
+            src={require('~/assets/images/iconGoogle.png')} />
           }
         />
       </YStack>

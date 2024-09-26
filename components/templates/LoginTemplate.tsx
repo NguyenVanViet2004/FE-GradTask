@@ -24,12 +24,14 @@ const LoginTemplate: React.FC = (): JSX.Element => {
       <SafeAreaView
         style={styles.container}>
 
-        <View gap={120} marginTop={50}>
+        <View marginTop={50}>
           <ContentTitle
             title={t('screens.login.welcomeBack')}
             subtitle={t('screens.login.loginPrompt')}
           />
+        </View>
 
+        <View marginTop={'25%'}>
           <InputForm
             visibleInputWithIcons={false}
             visibleForgotPassword={true}
@@ -37,10 +39,9 @@ const LoginTemplate: React.FC = (): JSX.Element => {
             onLoginPress={ButtonLogin}
             onLoginGooglePress={ButtonLogin}
           />
-
         </View>
-
-        <View flex={1} justifyContent="flex-end" >
+        
+        <View flex={1} justifyContent="center" >
           <TextWithLink
             heading={t('screens.login.signupPrompt')}
             linkText={t('screens.login.joinNow')}
