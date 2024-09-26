@@ -1,7 +1,7 @@
 import { Mail, Phone } from '@tamagui/lucide-icons'
 import { LinearGradient } from 'expo-linear-gradient'
 import React, { useState } from 'react'
-import { StyleSheet, useColorScheme } from 'react-native'
+import { StatusBar, StyleSheet, useColorScheme } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { TamaguiProvider, YStack } from 'tamagui'
 
@@ -30,13 +30,21 @@ const ForgotTemplate: React.FC = (): JSX.Element => {
   return (
     <TamaguiProvider config={config} defaultTheme={colorScheme as any}>
       <SafeAreaView style={styles.flex}>
+        <StatusBar
+          barStyle={colorScheme === 'dark' ? 'light-content' : 'dark-content'}
+          backgroundColor={colorScheme === 'dark'
+            ? colors.colorDarkModeTop
+            : colors.white}
+        />
+
         {colorScheme === 'dark'
           ? (
             <LinearGradient
               colors={[colors.colorDarkModeTop, colors.colorDarkModeBottom]}
               style={styles.flex}
             >
-              <YStack gap="$10" mt="$3" px="$4" marginTop="$space.12" flex={1}>
+              <YStack gap="$10" mt="$3" px="$4" marginTop="$space.12"
+              >
                 <ContentTitle
                   title={t('screens.forgot.forgotPassword')}
                   subtitle={t('screens.forgot.titleForgot')}
@@ -64,7 +72,8 @@ const ForgotTemplate: React.FC = (): JSX.Element => {
                   />
                 </YStack>
 
-                <PositiveButton title={t('screens.forgot.sendCode')} />
+                <PositiveButton title={t('screens.forgot.sendCode')}
+                  onPress={() => {}}/>
               </YStack>
             </LinearGradient>)
           : (
@@ -74,7 +83,6 @@ const ForgotTemplate: React.FC = (): JSX.Element => {
               px="$4"
               marginTop="$space.12"
               flex={1}
-              style={{ backgroundColor: colors.white }}
             >
               <ContentTitle
                 title={t('screens.forgot.forgotPassword')}
