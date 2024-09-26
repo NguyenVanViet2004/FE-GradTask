@@ -24,7 +24,7 @@ const LoginTemplate: React.FC = (): JSX.Element => {
       <SafeAreaView
         style={styles.container}>
 
-        <View marginTop={50}>
+        <View marginTop={'13%'}>
           <ContentTitle
             title={t('screens.login.welcomeBack')}
             subtitle={t('screens.login.loginPrompt')}
@@ -41,7 +41,7 @@ const LoginTemplate: React.FC = (): JSX.Element => {
           />
         </View>
 
-        <View flex={1} justifyContent="flex-end" >
+        <View flex={1} justifyContent="flex-end">
           <TextWithLink
             heading={t('screens.login.signupPrompt')}
             linkText={t('screens.login.joinNow')}
