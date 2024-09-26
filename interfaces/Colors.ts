@@ -1,15 +1,16 @@
 export interface Colors {
   text: string
   lightMist: string
-  slateGray: string
+  oceanMist: string
   white: string
-  primaryTeal: string
   blueSapphire: string
   gray: string
   lightTransparentBlack: string
-  backGround: string
+  midnightGlow: string
   inputBackground: string
   black: string
   labelButton: string
-  darkBlue: string
+  skyLight: string
+  oceanTeal: string
+  placeholderColor: string
 }
