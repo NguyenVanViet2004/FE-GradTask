@@ -40,7 +40,7 @@ const LoginTemplate: React.FC = (): JSX.Element => {
             onLoginGooglePress={ButtonLogin}
           />
         </View>
-        
+
         <View flex={1} justifyContent="center" >
           <TextWithLink
             heading={t('screens.login.signupPrompt')}

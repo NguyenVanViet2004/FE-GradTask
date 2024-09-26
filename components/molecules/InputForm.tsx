@@ -9,12 +9,8 @@ import { NegativeButton } from '~/components/atoms/NegativeButton'
 import { PositiveButton } from '~/components/atoms/PositiveButton'
 import { TextTitle } from '~/components/atoms/TextTitle'
 import getColors from '~/constants/Colors'
-import useTranslation from '~/hooks/useTranslation'
-
-import { SvgXml } from 'react-native-svg';
 import { SPACING_20 } from '~/constants/Constants'
-// import IconGoogle from '../../assets/images/IconGoogle.svg'
-
+import useTranslation from '~/hooks/useTranslation'
 
 type Props = {
   visibleRecoveryPassword?: boolean
@@ -116,9 +112,9 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
           title={t('screens.login.signIn')} />
 
         <View flexDirection="row" alignItems="center" justifyContent="center">
-          <Separator borderColor={colors.oceanMist}/> 
+          <Separator borderColor={colors.oceanMist}/>
           <Text marginHorizontal={SPACING_20} color={colors.text} >or</Text>
-          <Separator borderColor={colors.oceanMist}/> 
+          <Separator borderColor={colors.oceanMist}/>
         </View>
 
         <NegativeButton
@@ -127,10 +123,10 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
           backgroundColor={colors.white}
           color={colors.labelButton}
           icon={
-            <Image 
-            width={SPACING_20} 
-            height={SPACING_20} 
-            src={require('~/assets/images/iconGoogle.png')} />
+            <Image
+              width={SPACING_20}
+              height={SPACING_20}
+              src={require('~/assets/images/iconGoogle.png')} />
           }
         />
       </YStack>
