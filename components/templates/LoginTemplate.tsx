@@ -1,19 +1,17 @@
 import { useRouter } from 'expo-router'
 import React from 'react'
-import { StyleSheet, useColorScheme } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { View } from 'tamagui'
-import { LinearGradient } from 'tamagui/linear-gradient'
 
 import ContentTitle from '~/components/atoms/ContentTitle'
+import GradientBackground from '~/components/molecules/GradientBackground'
 import InputForm from '~/components/molecules/InputForm'
 import TextWithLink from '~/components/molecules/TextWithLink'
-import getColors from '~/constants/Colors'
 import useTranslation from '~/hooks/useTranslation'
 
 const LoginTemplate: React.FC = (): JSX.Element => {
   const { t } = useTranslation()
-  const colors = getColors(useColorScheme())
   const router = useRouter()
 
   const ButtonLogin = (): void => {
@@ -21,12 +19,8 @@ const LoginTemplate: React.FC = (): JSX.Element => {
   }
 
   return (
-    <LinearGradient
-      colors={[colors.darkBlue, colors.backGround]}
-      start={[1, 1]}
-      end={[0, 0]}
-      flex={1}
-    >
+    <GradientBackground>
+
       <SafeAreaView
         style={styles.container}>
 
@@ -55,7 +49,8 @@ const LoginTemplate: React.FC = (): JSX.Element => {
 
       </SafeAreaView>
 
-    </LinearGradient>
+    </GradientBackground>
+
   )
 }
 
