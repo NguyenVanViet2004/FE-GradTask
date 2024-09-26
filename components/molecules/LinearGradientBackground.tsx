@@ -6,7 +6,7 @@ import getColors from '~/constants/Colors'
 
 type GradientBackgroundProps = PropsWithChildren<Record<string, unknown>>
 
-const GradientBackground: React.FC<GradientBackgroundProps> = (
+const LinearGradientBackground: React.FC<GradientBackgroundProps> = (
   { children }
 ) => {
   const colors = getColors(useColorScheme())
@@ -14,11 +14,10 @@ const GradientBackground: React.FC<GradientBackgroundProps> = (
   return (
     <LinearGradient
       colors={[colors.midnightGlow, colors.skyLight]}
-      flex={1}
-    >
+      flex={1}>
       {children}
     </LinearGradient>
   )
 }
 
-export default GradientBackground
+export default LinearGradientBackground

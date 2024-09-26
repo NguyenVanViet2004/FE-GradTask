@@ -5,7 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { View } from 'tamagui'
 
 import ContentTitle from '~/components/atoms/ContentTitle'
-import GradientBackground from '~/components/molecules/GradientBackground'
+import LinearGradientBackground from '~/components/molecules/LinearGradientBackground'
 import InputForm from '~/components/molecules/InputForm'
 import TextWithLink from '~/components/molecules/TextWithLink'
 import useTranslation from '~/hooks/useTranslation'
@@ -19,7 +19,7 @@ const LoginTemplate: React.FC = (): JSX.Element => {
   }
 
   return (
-    <GradientBackground>
+    <LinearGradientBackground>
 
       <SafeAreaView
         style={styles.container}>
@@ -50,7 +50,7 @@ const LoginTemplate: React.FC = (): JSX.Element => {
 
       </SafeAreaView>
 
-    </GradientBackground>
+    </LinearGradientBackground>
 
   )
 }
