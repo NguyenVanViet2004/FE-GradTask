@@ -5,8 +5,8 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { View } from 'tamagui'
 
 import ContentTitle from '~/components/atoms/ContentTitle'
-import LinearGradientBackground from '~/components/molecules/LinearGradientBackground'
 import InputForm from '~/components/molecules/InputForm'
+import LinearGradientBackground from '~/components/molecules/LinearGradientBackground'
 import TextWithLink from '~/components/molecules/TextWithLink'
 import useTranslation from '~/hooks/useTranslation'
 
