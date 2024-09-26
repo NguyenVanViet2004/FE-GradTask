@@ -4,6 +4,7 @@ import { useColorScheme } from 'react-native'
 import { Input, type InputProps, XStack } from 'tamagui'
 
 import getColors from '~/constants/Colors'
+import { useAppFonts } from '~/hooks/useAppFonts'
 
 type Props = {
   iconRight?: JSX.Element
@@ -12,6 +13,7 @@ type Props = {
 
 const InputWithIcons: React.FC<Props> = (props: Props) => {
   const colors = getColors(useColorScheme())
+  const { fonts } = useAppFonts();
   const [isFocused, setIsFocused] = useState<boolean>(false)
 
   const inputContainerStyle = {
@@ -34,7 +36,7 @@ const InputWithIcons: React.FC<Props> = (props: Props) => {
         unstyled
         marginHorizontal={18}
         paddingVertical={14}
-        fontFamily={'JetBrainsMonoRegular'}
+        fontFamily={fonts.JetBrainsMonoRegular}
         fontSize={16}
         color={colors.primaryTeal}
         flex={1}
