@@ -4,6 +4,7 @@ import { useColorScheme } from 'react-native'
 import { Input, type InputProps, XStack } from 'tamagui'
 
 import getColors from '~/constants/Colors'
+import { RADIUS_BUTTON } from '~/constants/Constants'
 import { useAppFonts } from '~/hooks/useAppFonts'
 
 type Props = {
@@ -25,7 +26,7 @@ const InputWithIcons: React.FC<Props> = (props: Props) => {
   return (
     <XStack
       alignItems="center"
-      borderRadius={10}
+      borderRadius={RADIUS_BUTTON}
       paddingHorizontal={24}
       style={inputContainerStyle}
     >
