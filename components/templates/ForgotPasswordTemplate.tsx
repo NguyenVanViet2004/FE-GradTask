@@ -29,7 +29,7 @@ const ForgotTemplate: React.FC = (): JSX.Element => {
 
   return (
     <TamaguiProvider config={config} defaultTheme={colorScheme as any}>
-      <SafeAreaView style={styles.flex}>
+      <SafeAreaView style={styles.flex} edges={['top', 'left', 'right']}>
         <StatusBar
           barStyle={colorScheme === 'dark' ? 'light-content' : 'dark-content'}
           backgroundColor={colorScheme === 'dark'
@@ -43,8 +43,7 @@ const ForgotTemplate: React.FC = (): JSX.Element => {
               colors={[colors.colorDarkModeTop, colors.colorDarkModeBottom]}
               style={styles.flex}
             >
-              <YStack gap="$10" mt="$3" px="$4" marginTop="$space.12"
-              >
+              <YStack gap="$10" mt="$3" px="$4" marginTop="$space.12">
                 <ContentTitle
                   title={t('screens.forgot.forgotPassword')}
                   subtitle={t('screens.forgot.titleForgot')}
@@ -72,8 +71,10 @@ const ForgotTemplate: React.FC = (): JSX.Element => {
                   />
                 </YStack>
 
-                <PositiveButton title={t('screens.forgot.sendCode')}
-                  onPress={() => {}}/>
+                <PositiveButton
+                  title={t('screens.forgot.sendCode')}
+                  onPress={() => {}}
+                />
               </YStack>
             </LinearGradient>)
           : (
@@ -111,8 +112,10 @@ const ForgotTemplate: React.FC = (): JSX.Element => {
                 />
               </YStack>
 
-              <PositiveButton title={t('screens.forgot.sendCode')}
-                onPress={() => {}} />
+              <PositiveButton
+                title={t('screens.forgot.sendCode')}
+                onPress={() => {}}
+              />
             </YStack>)}
       </SafeAreaView>
     </TamaguiProvider>
