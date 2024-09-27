@@ -4,7 +4,7 @@ import { useColorScheme } from 'react-native'
 import { Input, type InputProps, XStack } from 'tamagui'
 
 import getColors from '~/constants/Colors'
-import { RADIUS_BUTTON } from '~/constants/Constants'
+import { HEIGHT_BUTTON, RADIUS_BUTTON } from '~/constants/Constants'
 import { useAppFonts } from '~/hooks/useAppFonts'
 
 type Props = {
@@ -36,7 +36,7 @@ const InputWithIcons: React.FC<Props> = (props: Props) => {
         {...props}
         unstyled
         marginHorizontal={18}
-        paddingVertical={14}
+        height={HEIGHT_BUTTON}
         fontFamily={fonts.JetBrainsMonoRegular}
         fontSize={16}
         color={colors.oceanTeal}
