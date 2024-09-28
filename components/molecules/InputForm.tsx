@@ -16,13 +16,15 @@ type Props = {
   visibleRecoveryPassword?: boolean
   visibleInputWithIcons?: boolean
   visibleForgotPassword?: boolean
-  visibleSeparator?: boolean
+  visibleSpace?: boolean
   onChangeNameText?: (text: string) => void
   onChangeEmailText?: (text: string) => void
   onChangePhoneText?: (text: string) => void
   onChangePasswordText?: (text: string) => void
   onLoginPress?: () => void
   onLoginGooglePress?: () => void
+  positiveButtonTitle: string
+  negativeButtonTitle: string
 } & InputProps
 
 const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
@@ -100,8 +102,8 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
       }
 
       <View marginTop={'25%'} display={
-        !isNil(props.visibleSeparator) &&
-                        props.visibleSeparator
+        !isNil(props.visibleSpace) &&
+                        props.visibleSpace
           ? 'flex'
           : 'none'}
       />
@@ -109,7 +111,7 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
       <YStack gap={20} marginTop={SPACING_20}>
         <PositiveButton
           onPress={props.onLoginPress}
-          title={t('screens.login.signIn')} />
+          title={props.positiveButtonTitle}/>
 
         <View flexDirection="row" alignItems="center" justifyContent="center">
           <Separator borderColor={colors.oceanMist}/>
@@ -119,7 +121,7 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
 
         <NegativeButton
           onPress={props.onLoginGooglePress}
-          title={t('screens.login.signInWithGoogle')}
+          title={props.negativeButtonTitle}
           backgroundColor={colors.white}
           color={colors.labelButton}
           icon={

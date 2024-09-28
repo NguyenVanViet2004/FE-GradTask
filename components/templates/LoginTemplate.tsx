@@ -35,9 +35,11 @@ const LoginTemplate: React.FC = (): JSX.Element => {
           <InputForm
             visibleInputWithIcons={false}
             visibleForgotPassword={true}
-            visibleSeparator={true}
+            visibleSpace={true}
             onLoginPress={ButtonLogin}
             onLoginGooglePress={ButtonLogin}
+            positiveButtonTitle={t('screens.login.signIn')}
+            negativeButtonTitle={t('screens.login.signInWithGoogle')}
           />
         </View>
 
