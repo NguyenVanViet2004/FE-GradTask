@@ -47,6 +47,15 @@
             "getStarted": "Get started",
             "next": "Next",
             "login": "Login"
+        },
+        "forgot":{
+            "emailAddress": "Email address",
+            "usePhoneNumber": "Use phone number",
+            "useEmailAddress": "Use email address",
+            "phoneNumber": "Phone number",
+            "sendCode": "Send code",
+            "titleForgot": "Please type your email below and we will give you a OTP code",
+            "forgotPassword": "Forgot your password"
         }
     }
 }
