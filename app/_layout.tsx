@@ -63,7 +63,7 @@ function RootLayoutNav (): React.ReactElement {
             options={{ headerShown: false }}
           />
           <Stack.Screen
-            name="authentication/Signup"
+            name="authentication/SignUp"
             options={{ headerShown: false }}
           />
         </Stack>
