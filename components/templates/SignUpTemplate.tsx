@@ -43,7 +43,7 @@ const SignUpTemplate: React.FC = (): JSX.Element => {
 
         </ScrollView>
 
-        <View justifyContent="center">
+        <View justifyContent="center" marginTop={10}>
           <TextWithLink
             heading={t('screens.signUp.alreadyHaveAnAccount')}
             linkText={t('screens.login.signIn')}
