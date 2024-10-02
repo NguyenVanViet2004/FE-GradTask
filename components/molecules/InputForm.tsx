@@ -126,8 +126,8 @@ const InputForm: React.FC<Props> = (props: Props): JSX.Element => {
           color={colors.labelButton}
           icon={
             <Image
-              width={SPACING_20}
-              height={SPACING_20}
+              width={20}
+              height={20}
               src={require('~/assets/images/iconGoogle.png')} />
           }
         />
