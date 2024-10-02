@@ -14,7 +14,7 @@ const SignUpTemplate: React.FC = (): JSX.Element => {
   const { t } = useTranslation()
   const router = useRouter()
 
-  const ButtonSignUp = (): void => {
+  const handleSignUp = (): void => {
     router.replace('/(tabs)/home')
   }
 
@@ -34,8 +34,8 @@ const SignUpTemplate: React.FC = (): JSX.Element => {
               visibleInputWithIcons={true}
               visibleForgotPassword={false}
               visibleSpace={false}
-              onLoginPress={ButtonSignUp}
-              onLoginGooglePress={ButtonSignUp}
+              onLoginPress={handleSignUp}
+              onLoginGooglePress={handleSignUp}
               positiveButtonTitle={t('screens.login.joinNow')}
               negativeButtonTitle={t('screens.signUp.joinWithGoogle')}
             />
