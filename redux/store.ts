@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
 
 import appointmentSlice from '~/features/appointmentSlice'
+import authSlice from '~/features/authSlice'
 import comboSlice from '~/features/comboSlice'
 import membershipSlice from '~/features/membershipSlice'
 import paymentSlice from '~/features/paymentSlice'
@@ -14,6 +15,7 @@ import voucherSlice from '~/features/voucherSlice'
 const store = configureStore({
   reducer: {
     appointments: appointmentSlice,
+    auths: authSlice,
     combos: comboSlice,
     membership: membershipSlice,
     payments: paymentSlice,
