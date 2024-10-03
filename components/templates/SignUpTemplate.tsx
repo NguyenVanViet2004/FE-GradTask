@@ -29,7 +29,7 @@ const SignUpTemplate: React.FC = (): JSX.Element => {
             />
           </View>
 
-          <View marginTop={'15%'}>
+          <View marginTop={'15%'} paddingBottom={20}>
             <InputForm
               visibleInputWithIcons={true}
               visibleForgotPassword={false}
@@ -40,10 +40,8 @@ const SignUpTemplate: React.FC = (): JSX.Element => {
               negativeButtonTitle={t('screens.signUp.joinWithGoogle')}
             />
           </View>
-
         </ScrollView>
-
-        <View justifyContent="center" marginTop={10}>
+        <View justifyContent="flex-end" bottom={20} flex={1}>
           <TextWithLink
             heading={t('screens.signUp.alreadyHaveAnAccount')}
             linkText={t('screens.login.signIn')}
@@ -57,7 +55,7 @@ const SignUpTemplate: React.FC = (): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20
+    paddingHorizontal: 20
   }
 })
 
