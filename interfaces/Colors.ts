@@ -16,4 +16,11 @@ export interface Colors {
   blue: string
   spaceCadet: string
   yellow: string
+  green: string
+  red: string
+  blueOTP: string
+  lightGreen: string
+  lightRed: string
+  lightGray: string
+  borderInputaOTP: string
 }
