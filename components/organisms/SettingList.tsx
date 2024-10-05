@@ -39,7 +39,7 @@ const SettingList = ({ colors }: props): React.JSX.Element[] =>
             </Text>
           }
           borderBottomWidth={index !== card.items.length - 1 ? 0.2 : 0}
-          borderColor={'gray'}
+          borderColor="gray"
         />
       ))}
     </Card>
