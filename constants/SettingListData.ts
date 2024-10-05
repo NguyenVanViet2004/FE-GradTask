@@ -1,8 +1,8 @@
-import { AlertCircle, BellRing, Globe, Heart, Lock, User2 } from "@tamagui/lucide-icons";
-import { useExpoRouter } from "expo-router/build/global-state/router-store";
-import useTranslation from "~/hooks/useTranslation";
+import { AlertCircle, BellRing, Globe, Heart, Lock, User2 } from '@tamagui/lucide-icons'
+import { useExpoRouter } from 'expo-router/build/global-state/router-store'
 
-import type SettingsList from "~/interfaces/SettingsList";
+import useTranslation from '~/hooks/useTranslation'
+import type SettingsList from '~/interfaces/SettingsList'
 
 export const SettingListData = (): SettingsList[] => {
   const { t } = useTranslation()
@@ -14,42 +14,42 @@ export const SettingListData = (): SettingsList[] => {
         {
           icon: User2,
           onPress: () => {
-            router.navigate("/profile");
+            router.navigate('/profile')
           },
-          title: t("user.userInfo"),
+          title: t('user.userInfo')
         },
         {
           icon: Heart,
           onPress: () => {},
-          title: t("user.yourFavorite"),
+          title: t('user.yourFavorite')
         },
         {
           icon: Lock,
           onPress: () => {},
-          title: t("screens.profile.changePassword"),
-        },
+          title: t('screens.profile.changePassword')
+        }
       ],
-      key: "card1",
+      key: 'card1'
     },
     {
       items: [
         {
           icon: BellRing,
           onPress: () => {},
-          title: t("permissions.NOTIFICATION.title"),
+          title: t('permissions.NOTIFICATION.title')
         },
         {
           icon: Globe,
           onPress: () => {},
-          title: t("screens.profile.language"),
+          title: t('screens.profile.language')
         },
         {
           icon: AlertCircle,
           onPress: () => {},
-          title: t("screens.profile.about"),
-        },
+          title: t('screens.profile.about')
+        }
       ],
-      key: "card2",
-    },
-  ];
-};
+      key: 'card2'
+    }
+  ]
+}

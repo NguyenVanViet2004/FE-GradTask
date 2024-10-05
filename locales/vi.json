@@ -70,5 +70,13 @@
     "user": {
         "userInfo": "Thông tin cá nhân",
         "yourFavorite": "Danh sách yêu thích"
+    },
+    "button" : {
+        "confirm": "Có",
+        "cancel": "Hủy"
+    },
+    "common": {
+        "warning": "Cảnh báo",
+        "doYouWantToLogout": "Do you want to log out?"
     }
 }

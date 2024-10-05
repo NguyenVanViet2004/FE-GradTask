@@ -70,5 +70,13 @@
     "user": {
         "userInfo": "User information",
         "yourFavorite": "Your favorite"
+    },
+    "button" : {
+        "confirm": "Ok",
+        "cancel": "Cancel"
+    },
+    "common": {
+        "warning": "Warning",
+        "doYouWantToLogout": "Do you want to log out?"
     }
 }

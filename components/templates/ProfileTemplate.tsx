@@ -1,21 +1,21 @@
+import { LogOut } from '@tamagui/lucide-icons'
+import { type Router, useRouter } from 'expo-router'
+import { type TFunction } from 'i18next'
 import React from 'react'
 import { Alert, StyleSheet, useColorScheme } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Button, ScrollView, Text } from 'tamagui'
 
 import LinearGradientBackground from '~/components/molecules/LinearGradientBackground'
-import getColors from '~/constants/Colors'
-import { GenderEnum } from '~/interfaces/enum/Gender'
-import { Role } from '~/interfaces/enum/Role'
-import User from '~/interfaces/User'
-import type Membership from '~/interfaces/Membership'
-import { Rank } from '~/interfaces/enum/Rank'
 import UserProfile from '~/components/molecules/UserProfile'
 import SettingList from '~/components/organisms/SettingList'
-import { LogOut } from '@tamagui/lucide-icons'
+import getColors from '~/constants/Colors'
 import useTranslation from '~/hooks/useTranslation'
-import { TFunction } from 'i18next'
-import { Router, useRouter } from 'expo-router'
+import { GenderEnum } from '~/interfaces/enum/Gender'
+import { Rank } from '~/interfaces/enum/Rank'
+import { Role } from '~/interfaces/enum/Role'
+import type Membership from '~/interfaces/Membership'
+import type User from '~/interfaces/User'
 
 const useHandleLogout = (
   t: TFunction<'translation', undefined>,
@@ -23,7 +23,7 @@ const useHandleLogout = (
   removeCachedData: VoidFunction
 ): VoidFunction => {
   return () => {
-    Alert.alert(t('common.warning'), t('common.DoYouWantToLogout'), [
+    Alert.alert(t('common.warning'), t('common.doYouWantToLogout'), [
       {
         onPress: () => {
           removeCachedData()
@@ -48,18 +48,18 @@ const ProfileTemplate = (): React.ReactElement => {
     point: 0
   }
   const userExample: User = {
-    fullName: 'Baby shark',
-    phoneNumber: '+1 (123) 456-7890',
-    avatarUrl: 'https://xsgames.co/randomusers/avatar.php?g=female',
     _id: '',
-    email: '',
-    password: '',
     address: null,
-    gender: GenderEnum.MALE,
+    avatarUrl: 'https://xsgames.co/randomusers/avatar.php?g=female',
     dateOfBirth: null,
-    role: Role.USER,
-    membership: membership,
+    email: '',
+    fullName: 'Baby shark',
+    gender: GenderEnum.MALE,
+    membership,
+    password: '',
+    phoneNumber: '+1 (123) 456-7890',
     point: 0,
+    role: Role.USER,
     token: 'hehe boy :)'
   }
 
@@ -72,7 +72,7 @@ const ProfileTemplate = (): React.ReactElement => {
           <SettingList colors={colors} />
 
           <Button
-            backgroundColor='$colorTransparent'
+            backgroundColor="$colorTransparent"
             borderWidth={1}
             borderRadius="$2"
             borderColor="red"
@@ -94,10 +94,10 @@ const ProfileTemplate = (): React.ReactElement => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingTop: 20,
+    gap: 30,
     paddingBottom: 150,
-    gap: 30
+    paddingHorizontal: 20,
+    paddingTop: 20
   }
 })
 

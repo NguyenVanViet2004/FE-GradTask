@@ -1,23 +1,23 @@
-import { ChevronRight } from "@tamagui/lucide-icons";
-import React from "react";
-import { Card, ListItem, Text } from "tamagui";
+import { ChevronRight } from '@tamagui/lucide-icons'
+import React from 'react'
+import { Card, ListItem, Text } from 'tamagui'
 
-import { SettingListData } from "~/constants/SettingListData";
-import { Colors } from "~/interfaces/Colors";
+import { SettingListData } from '~/constants/SettingListData'
+import { type Colors } from '~/interfaces/Colors'
 
 interface props {
-    colors: Colors
+  colors: Colors
 }
 
-const SettingList = ({colors}: props) =>
+const SettingList = ({ colors }: props): React.JSX.Element[] =>
   SettingListData().map((card, index) => (
     <Card
       key={card.key}
       backgroundColor={colors.lightMist}
       borderRadius={4}
       elevation={8}
-      shadowColor='black'
-      shadowOffset={{height: 2, width: 0}}
+      shadowColor="black"
+      shadowOffset={{ height: 2, width: 0 }}
       shadowOpacity={0.3}
       shadowRadius={4}
       marginTop={index === 0 ? 20 : 0}
@@ -43,6 +43,6 @@ const SettingList = ({colors}: props) =>
         />
       ))}
     </Card>
-  ));
+  ))
 
-export default SettingList;
+export default SettingList

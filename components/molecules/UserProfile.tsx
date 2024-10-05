@@ -1,10 +1,10 @@
-import { User2, Moon, Sun, MoonStar } from '@tamagui/lucide-icons'
+import { MoonStar, Sun, User2 } from '@tamagui/lucide-icons'
 import React from 'react'
 import { useColorScheme } from 'react-native'
 import { Avatar, Button, Card, Text, View } from 'tamagui'
+
 import getColors from '~/constants/Colors'
 import { RADIUS_BUTTON } from '~/constants/Constants'
-
 import { type Colors } from '~/interfaces/Colors'
 import type User from '~/interfaces/User'
 
@@ -26,7 +26,7 @@ const UserProfile = ({ user }: props): JSX.Element => {
       alignItems="center"
       borderRadius={RADIUS_BUTTON}
       elevation={8}
-      shadowColor='black'
+      shadowColor="black"
       shadowOffset={{ height: 2, width: 0 }}
       shadowOpacity={0.3}
       shadowRadius={4}
@@ -51,11 +51,12 @@ const UserProfile = ({ user }: props): JSX.Element => {
         <Text color={colors.text}>{user.phoneNumber}</Text>
       </View>
       <Button
-        icon={isDarkMode ?
-          <Sun size={26} fill={colors.yellow} color={colors.yellow} /> :
-          <MoonStar size={26} fill={colors.spaceCadet} color={colors.spaceCadet} />}
+        icon={isDarkMode
+          ? <Sun size={26} fill={colors.yellow} color={colors.yellow} />
+          : <MoonStar size={26}
+            fill={colors.spaceCadet} color={colors.spaceCadet} />}
         circular
-        backgroundColor='$colorTransparent'
+        backgroundColor="$colorTransparent"
         borderWidth={0}
         size={40}
       />
