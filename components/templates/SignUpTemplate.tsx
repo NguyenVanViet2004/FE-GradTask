@@ -18,10 +18,14 @@ const SignUpTemplate: React.FC = (): JSX.Element => {
     router.replace('/(tabs)/home')
   }
 
+  const redirectToLogin = (): void => {
+    router.back()
+  }
+
   return (
     <LinearGradientBackground>
-      <SafeAreaView style={styles.container}>
-        <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <SafeAreaView style={styles.container}>
           <View marginTop={'13%'}>
             <ContentTitle
               title={t('screens.signUp.createAnAccount')}
@@ -29,7 +33,7 @@ const SignUpTemplate: React.FC = (): JSX.Element => {
             />
           </View>
 
-          <View marginTop={'15%'} paddingBottom={20}>
+          <View marginTop={'15%'}>
             <InputForm
               visibleInputWithIcons={true}
               visibleForgotPassword={false}
@@ -40,14 +44,15 @@ const SignUpTemplate: React.FC = (): JSX.Element => {
               negativeButtonTitle={t('screens.signUp.joinWithGoogle')}
             />
           </View>
-        </ScrollView>
-        <View justifyContent="flex-end" bottom={20} flex={1}>
-          <TextWithLink
-            heading={t('screens.signUp.alreadyHaveAnAccount')}
-            linkText={t('screens.login.signIn')}
-          />
-        </View>
-      </SafeAreaView>
+          <View marginTop={'18%'} >
+            <TextWithLink
+              heading={t('screens.signUp.alreadyHaveAnAccount')}
+              linkText={t('screens.login.signIn')}
+              onLinkPress={redirectToLogin}
+            />
+          </View>
+        </SafeAreaView>
+      </ScrollView>
     </LinearGradientBackground>
   )
 }
@@ -55,7 +60,7 @@ const SignUpTemplate: React.FC = (): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20
+    padding: 20
   }
 })
 

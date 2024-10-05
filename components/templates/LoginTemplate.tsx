@@ -14,14 +14,18 @@ const LoginTemplate: React.FC = (): JSX.Element => {
   const { t } = useTranslation()
   const router = useRouter()
 
-  const ButtonLogin = (): void => {
+  const handleLogin = (): void => {
     router.replace('/(tabs)/home')
+  }
+
+  const redirectToSignUp = (): void => {
+    router.push('/authentication/SignUp')
   }
 
   return (
     <LinearGradientBackground>
-      <SafeAreaView style={styles.container}>
-        <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView showsVerticalScrollIndicator={false} >
+        <SafeAreaView style={styles.container}>
           <View marginTop={'13%'}>
             <ContentTitle
               title={t('screens.login.welcomeBack')}
@@ -29,26 +33,27 @@ const LoginTemplate: React.FC = (): JSX.Element => {
             />
           </View>
 
-          <View marginTop={'25%'} paddingBottom={20} >
+          <View marginTop={'25%'}>
             <InputForm
               visibleInputWithIcons={false}
               visibleForgotPassword={true}
               visibleSpace={true}
-              onLoginPress={ButtonLogin}
-              onLoginGooglePress={ButtonLogin}
+              onLoginPress={handleLogin}
+              onLoginGooglePress={() => {}}
               positiveButtonTitle={t('screens.login.signIn')}
               negativeButtonTitle={t('screens.login.signInWithGoogle')}
             />
           </View>
-        </ScrollView>
 
-        <View flex={1} justifyContent="flex-end" bottom={20}>
-          <TextWithLink
-            heading={t('screens.login.signupPrompt')}
-            linkText={t('screens.login.joinNow')}
-          />
-        </View>
-      </SafeAreaView>
+          <View marginTop={'25%'} >
+            <TextWithLink
+              heading={t('screens.login.signupPrompt')}
+              linkText={t('screens.login.joinNow')}
+              onLinkPress={redirectToSignUp}
+            />
+          </View>
+        </SafeAreaView>
+      </ScrollView>
     </LinearGradientBackground>
   )
 }
@@ -56,7 +61,7 @@ const LoginTemplate: React.FC = (): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20
+    padding: 20
   }
 })
 
