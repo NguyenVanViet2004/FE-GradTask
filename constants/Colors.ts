@@ -6,8 +6,9 @@ const colors: Record<'light' | 'dark', Colors> = {
   dark: {
     black: '#000000',
     blueSapphire: '#156778',
-    gray: '#757575',
+    gray: '#979797',
     inputBackground: '#1C2655',
+    blue: '#235AFF',
     labelButton: '#000000',
     lightMist: '#1C2655',
     lightTransparentBlack: 'rgba(0, 0, 0, 0.3)',
@@ -17,13 +18,16 @@ const colors: Record<'light' | 'dark', Colors> = {
     placeholderColor: '#ADB3BC',
     skyLight: '#3548A3',
     text: '#fff',
-    white: '#FFFFFF'
+    white: '#FFFFFF',
+    spaceCadet: '#1C2655',
+    yellow: '#ffff00'
   },
   light: {
     black: '#000000',
     blueSapphire: '#156778',
-    gray: '#757575',
+    gray: '#979797',
     inputBackground: '#FFFFFF',
+    blue: '#235AFF',
     labelButton: '#156778',
     lightMist: '#F0F3F6',
     lightTransparentBlack: 'rgba(0, 0, 0, 0.3)',
@@ -33,7 +37,9 @@ const colors: Record<'light' | 'dark', Colors> = {
     placeholderColor: '#ADB3BC',
     skyLight: '#FFFFFF',
     text: '#000',
-    white: '#FFFFFF'
+    white: '#FFFFFF',
+    spaceCadet: '#1C2655',
+    yellow: '#ffff00'
   }
 }
 

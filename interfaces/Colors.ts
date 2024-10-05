@@ -13,4 +13,7 @@ export interface Colors {
   skyLight: string
   oceanTeal: string
   placeholderColor: string
+  blue: string,
+  spaceCadet: string,
+  yellow: string
 }
