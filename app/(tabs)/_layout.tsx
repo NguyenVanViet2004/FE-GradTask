@@ -17,7 +17,7 @@ const BottomTab = (): React.JSX.Element => {
   return (
     <Tabs screenOptions={{
       headerShown: false,
-      tabBarActiveTintColor: Colors(colorScheme).blueSapphire,
+      tabBarActiveTintColor: Colors(colorScheme).blue,
       tabBarInactiveTintColor: Colors(colorScheme).gray,
       tabBarLabelStyle: {
         fontFamily: fonts.JetBrains
@@ -39,6 +39,7 @@ const BottomTab = (): React.JSX.Element => {
             shadowRadius: 4
           }
         }),
+        backgroundColor: Colors(colorScheme).lightMist,
         height: 70,
         paddingBottom: 10
       }
