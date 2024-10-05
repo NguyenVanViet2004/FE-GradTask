@@ -10,11 +10,11 @@ import LinearGradientBackground from '~/components/molecules/LinearGradientBackg
 import TextWithLink from '~/components/molecules/TextWithLink'
 import useTranslation from '~/hooks/useTranslation'
 
-const LoginTemplate: React.FC = (): JSX.Element => {
+const SignUpTemplate: React.FC = (): JSX.Element => {
   const { t } = useTranslation()
   const router = useRouter()
 
-  const ButtonLogin = (): void => {
+  const handleSignUp = (): void => {
     router.replace('/(tabs)/home')
   }
 
@@ -24,28 +24,27 @@ const LoginTemplate: React.FC = (): JSX.Element => {
         <ScrollView showsVerticalScrollIndicator={false}>
           <View marginTop={'13%'}>
             <ContentTitle
-              title={t('screens.login.welcomeBack')}
-              subtitle={t('screens.login.loginPrompt')}
+              title={t('screens.signUp.createAnAccount')}
+              subtitle={t('screens.signUp.signUpPrompt')}
             />
           </View>
 
-          <View marginTop={'25%'} paddingBottom={20} >
+          <View marginTop={'15%'} paddingBottom={20}>
             <InputForm
-              visibleInputWithIcons={false}
-              visibleForgotPassword={true}
-              visibleSpace={true}
-              onLoginPress={ButtonLogin}
-              onLoginGooglePress={ButtonLogin}
-              positiveButtonTitle={t('screens.login.signIn')}
-              negativeButtonTitle={t('screens.login.signInWithGoogle')}
+              visibleInputWithIcons={true}
+              visibleForgotPassword={false}
+              visibleSpace={false}
+              onLoginPress={handleSignUp}
+              onLoginGooglePress={handleSignUp}
+              positiveButtonTitle={t('screens.login.joinNow')}
+              negativeButtonTitle={t('screens.signUp.joinWithGoogle')}
             />
           </View>
         </ScrollView>
-
-        <View flex={1} justifyContent="flex-end" bottom={20}>
+        <View justifyContent="flex-end" bottom={20} flex={1}>
           <TextWithLink
-            heading={t('screens.login.signupPrompt')}
-            linkText={t('screens.login.joinNow')}
+            heading={t('screens.signUp.alreadyHaveAnAccount')}
+            linkText={t('screens.login.signIn')}
           />
         </View>
       </SafeAreaView>
@@ -60,4 +59,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default LoginTemplate
+export default SignUpTemplate

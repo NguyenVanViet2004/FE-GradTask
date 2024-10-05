@@ -41,7 +41,11 @@
             "name": "Name",
             "mobileNumber": "Mobile number",
             "TermsOfUse1": "By signing up you agree to our ",
-            "TermsOfUse2": "Term of use and privacy notice"
+            "TermsOfUse2": "Term of use and privacy notice",
+            "createAnAccount": "Create an account,",
+            "signUpPrompt": "Please type full information bellow and we can create your account",
+            "alreadyHaveAnAccount": "Already have an account?",
+            "joinWithGoogle": "Join with Google"
         },
         "onboarding": {
             "getStarted": "Get started",
