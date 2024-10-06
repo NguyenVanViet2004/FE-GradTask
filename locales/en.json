@@ -9,7 +9,8 @@
         "CALENDAR": {},
         "STORAGE": {},
         "NOTIFICATION": {
-            "permissionNotGranted": "NOTIFICATION is not allowed"
+            "permissionNotGranted": "NOTIFICATION is not allowed",
+            "title": "Notification"
         },
         "AUDIO": {}
     },
@@ -24,7 +25,11 @@
             "title": "Search"
         },
         "profile": {
-            "title": "Profile"
+            "title": "Profile",
+            "changePassword": "Change Password",
+            "language": "Language",
+            "about": "About",
+            "logout": "Logout"
         },
         "login": {
             "welcomeBack": "Welcome back,",
@@ -61,5 +66,17 @@
             "titleForgot": "Please type your email below and we will give you a OTP code",
             "forgotPassword": "Forgot your password"
         }
+    },
+    "user": {
+        "userInfo": "User information",
+        "yourFavorite": "Your favorite"
+    },
+    "button" : {
+        "confirm": "Ok",
+        "cancel": "Cancel"
+    },
+    "common": {
+        "warning": "Warning",
+        "doYouWantToLogout": "Do you want to log out?"
     }
 }

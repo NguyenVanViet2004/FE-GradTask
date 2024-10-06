@@ -9,7 +9,8 @@
         "CALENDAR": {},
         "STORAGE": {},
         "NOTIFICATION": {
-            "permissionNotGranted": "Ứng dụng chưa được cấp quyền"
+            "permissionNotGranted": "Ứng dụng chưa được cấp quyền",
+            "title": "Thông báo"
         },
         "AUDIO": {}
     },
@@ -24,7 +25,11 @@
             "title": "Tìm lịch"
         },
         "profile": {
-            "title": "Hồ sơ cá nhân"
+            "title": "Hồ sơ cá nhân",
+            "changePassword": "Đổi mật khẩu",
+            "language": "Ngôn ngữ",
+            "about": "Thêm",
+            "logout": "Đăng xuất"
         },
         "login": {
             "welcomeBack": "Chào mừng trở lại,",
@@ -61,5 +66,17 @@
             "titleForgot": "Vui lòng nhập email của bạn bên dưới và chúng tôi sẽ cung cấp cho bạn mã OTP",
             "forgotPassword": "Quên mật khẩu"
         }
+    },
+    "user": {
+        "userInfo": "Thông tin cá nhân",
+        "yourFavorite": "Danh sách yêu thích"
+    },
+    "button" : {
+        "confirm": "Có",
+        "cancel": "Hủy"
+    },
+    "common": {
+        "warning": "Cảnh báo",
+        "doYouWantToLogout": "Bạn có chắc muốn đăng xuất?"
     }
 }
