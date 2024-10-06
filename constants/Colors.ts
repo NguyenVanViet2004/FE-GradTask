@@ -16,7 +16,7 @@ const colors: Record<'light' | 'dark', Colors> = {
     lightGray: '#1C2655',
     lightGreen: '#58D68D',
     lightMist: '#1C2655',
-    lightRed: '#FFF5F5',
+    lightRed: '#A33737',
     lightTransparentBlack: 'rgba(0, 0, 0, 0.3)',
     midnightGlow: '#141B3D',
     oceanMist: '#F4E5E5',
