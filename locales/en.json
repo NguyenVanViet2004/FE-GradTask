@@ -55,7 +55,11 @@
         "onboarding": {
             "getStarted": "Get started",
             "next": "Next",
-            "login": "Login"
+            "login": "Login",
+            "step1": "Schedule your Appointment with the best Hair Stylist in your Town.",
+            "step2": "Schedule the Appointment in the best Salon for your Kids.",
+            "step3": "Book yourself a massage therapist to release all your stress.",
+            "step4": "Search for the best parlour near you to fulfil all your beauty needs."
         },
         "forgot":{
             "emailAddress": "Email address",
