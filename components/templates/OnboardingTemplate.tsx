@@ -7,7 +7,7 @@ import PrimaryButton from '~/components/atoms/PrimaryButton'
 import TransparentButton from '~/components/atoms/TransparentButton'
 import OnboardingItem from '~/components/molecules/OnboardingItem'
 import getColors from '~/constants/Colors'
-import dataOnboarding from '~/constants/DataOnboarding'
+import useDataOnboarding from '~/constants/DataOnboarding'
 import useTranslation from '~/hooks/useTranslation'
 
 const OnboardingTemplate = (): React.ReactElement => {
@@ -18,6 +18,7 @@ const OnboardingTemplate = (): React.ReactElement => {
   const colors = getColors(useColorScheme())
   const { width } = useWindowDimensions()
   const { t } = useTranslation()
+  const dataOnboading = useDataOnboarding()
 
   const viewableItemsChanged = useRef(({ viewableItems }:
   { viewableItems: ViewToken[] }) => {
@@ -34,7 +35,7 @@ const OnboardingTemplate = (): React.ReactElement => {
   const viewConfig = useRef({ viewAreaCoveragePercentThreshold: 50 }).current
 
   const scrollToNext = (): any => {
-    if (slideRef.current != null && currentIndex < dataOnboarding.length - 1) {
+    if (slideRef.current != null && currentIndex < dataOnboading.length - 1) {
       slideRef
         .current
         .scrollToIndex({ animated: true, index: currentIndex + 1 })
@@ -88,7 +89,7 @@ const OnboardingTemplate = (): React.ReactElement => {
   return (
     <View flex={1}>
       <FlatList
-        data={dataOnboarding}
+        data={dataOnboading}
         renderItem={({ item }) => (
           <OnboardingItem
             content={item.content}
@@ -109,7 +110,7 @@ const OnboardingTemplate = (): React.ReactElement => {
         ref={slideRef}
         decelerationRate={'fast'}
       />
-      {Paginator(dataOnboarding)}
+      {Paginator(dataOnboading)}
       <View
         position="absolute"
         bottom={20}
