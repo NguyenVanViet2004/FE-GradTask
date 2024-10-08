@@ -1,13 +1,13 @@
 import { type Router, useRouter } from 'expo-router'
 import { isNil } from 'lodash'
 import React, { useRef, useState } from 'react'
-import { Animated, FlatList, StyleSheet, useColorScheme, useWindowDimensions, type ViewToken } from 'react-native'
+import { Animated, FlatList, type ViewToken } from 'react-native'
 import { Spacer, View } from 'tamagui'
 
+import Panagitor from '~/components/atoms/Panagitor'
 import PrimaryButton from '~/components/atoms/PrimaryButton'
 import TransparentButton from '~/components/atoms/TransparentButton'
 import OnboardingItem from '~/components/molecules/OnboardingItem'
-import getColors from '~/constants/Colors'
 import useDataOnboarding from '~/constants/DataOnboarding'
 import useTranslation from '~/hooks/useTranslation'
 
@@ -15,54 +15,6 @@ const useHandleLogin = (router: Router): VoidFunction => {
   return () => {
     router.replace('/authentication/Login')
   }
-}
-
-const Paginator = (
-  { data, scrollX }:
-  { data: any, scrollX: Animated.Value }): React.ReactElement => {
-  const { width } = useWindowDimensions()
-  const colors = getColors(useColorScheme())
-  return (
-    <View
-      flexDirection="row"
-      position="absolute"
-      bottom={100}
-      width={'100%'}
-      justifyContent="center">
-      {
-        data.map((_: any, i: number) => {
-          const inputRange = [(i - 1) * width, i * width, (i + 1) * width]
-
-          const dotWidth = scrollX.interpolate({
-            extrapolate: 'clamp',
-            inputRange,
-            outputRange: [7, 7, 7]
-          })
-
-          const opacity = scrollX.interpolate({
-            extrapolate: 'clamp',
-            inputRange,
-            outputRange: [0.3, 1, 0.3]
-          })
-          return (
-            <Animated.View
-              style={[
-                styles.dot,
-                {
-                  backgroundColor: colors.white,
-                  opacity,
-                  width: dotWidth
-                }
-              ]}
-              key={i.toString()}
-            >
-            </Animated.View>
-          )
-        })
-      }
-
-    </View>
-  )
 }
 
 const scrollToNext = (
@@ -133,7 +85,7 @@ const OnboardingTemplate = (): React.ReactElement => {
         ref={slideRef}
         decelerationRate={'fast'}
       />
-      {Paginator({ data: dataOnboading, scrollX })}
+      <Panagitor data={dataOnboading} scrollX={scrollX}/>
       <View
         position="absolute"
         bottom={20}
@@ -161,13 +113,5 @@ const OnboardingTemplate = (): React.ReactElement => {
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  dot: {
-    borderRadius: 14,
-    height: 7,
-    marginRight: 5
-  }
-})
 
 export default OnboardingTemplate
