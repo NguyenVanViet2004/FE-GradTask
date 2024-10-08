@@ -31,7 +31,7 @@ export default function Home (): React.ReactElement {
 
   useLayoutEffect(() => {
     if (!isLoading && !firstTime) {
-      router.replace('/authentication/Login')
+      router.replace('/(tabs)/home')
     }
   }, [isLoading])
 
