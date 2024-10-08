@@ -31,12 +31,12 @@ export default function Home (): React.ReactElement {
 
   useLayoutEffect(() => {
     if (!isLoading && !firstTime) {
-      router.replace('/(tabs)/home')
+      router.replace('/authentication/Login')
     }
   }, [isLoading])
 
   if (isLoading) {
-    <Loading/>
+    return <Loading />
   }
   return (
     <OnboardingTemplate/>
