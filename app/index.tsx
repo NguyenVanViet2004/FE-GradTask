@@ -36,7 +36,7 @@ export default function Home (): React.ReactElement {
   }, [isLoading])
 
   if (isLoading) {
-    <Loading/>
+    return <Loading />
   }
   return (
     <OnboardingTemplate/>

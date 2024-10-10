@@ -55,7 +55,11 @@
         "onboarding": {
             "getStarted": "Bắt đầu",
             "next": "Tiếp",
-            "login": "Đăng nhập"
+            "login": "Đăng nhập",
+            "step1": "Lên lịch hẹn với nhà tạo mẫu tóc giỏi nhất trong khu vực của bạn.",
+            "step2": "Đặt lịch hẹn ở tiệm salon tốt nhất cho con bạn.",
+            "step3": "Đặt một chuyên viên massage để giải tỏa căng thẳng.",
+            "step4": "Tìm kiếm tiệm làm đẹp tốt nhất gần bạn để đáp ứng mọi nhu cầu về làm đẹp."
         },
         "forgot":{
             "emailAddress": "Địa chỉ Email",
